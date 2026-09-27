@@ -1,6 +1,10 @@
 Options -Indexes
 Options +FollowSymlinks
 
+<IfModule mod_mime.c>
+  AddType application/manifest+json .webmanifest
+</IfModule>
+
 <IfModule mod_rewrite.c>
   RewriteEngine On
   RewriteCond %{DOCUMENT_ROOT}/$1.html -f
