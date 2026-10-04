@@ -1,6 +1,6 @@
 # Yawasla Corpus
 
-[![license](https://img.shields.io/github/license/julienagullo/yawasla-corpus.svg)](https://github.com/julienagullo/yawasla-corpus/blob/main/LICENSE.md)
+[![license](https://img.shields.io/github/license/yawasla/corpus.svg)](https://github.com/yawasla/corpus/blob/main/LICENSE.md)
 
 **Website**: <https://corpus.yawasla.org>
 
@@ -22,7 +22,7 @@ A Quran reading app, verse by verse, with an official multilingual translation (
 #### Clone the repo
 
 ```
-git clone https://github.com/julienagullo/yawasla-corpus.git
+git clone https://github.com/yawasla/corpus.git
 ```
 
 #### Project setup
@@ -83,7 +83,7 @@ See the "Sources de données" section of [CLAUDE.md](./CLAUDE.md) for the exact 
 
 - Mail: [contact@jagullo.fr](contact@jagullo.fr?subject=[GitHub]%20yawasla-corpus)
 - Website: <https://jagullo.fr>
-- Github: <https://github.com/julienagullo/yawasla-corpus>
+- Github: <https://github.com/yawasla/corpus>
 
 ## Responsibility
 

@@ -15,7 +15,7 @@ export const NOMS_RECITATEURS: Record<Recitateur, Record<Langue, string>> = {
   },
 };
 
-export const GITHUB_URL = "https://github.com/julienagullo/yawasla-corpus";
+export const GITHUB_URL = "https://github.com/yawasla/corpus";
 
 export type Source = {
   nom: string;
