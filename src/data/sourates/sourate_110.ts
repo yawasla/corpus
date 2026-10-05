@@ -59,10 +59,7 @@ export const versets: Verset[] = [
       en: "In the name of Allah, most benevolent, ever-merciful.",
       es: "En el nombre de Al.lah, el Clementísimo, el Misericordiosísimo.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:01.6", "00:02.7"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:01.6", "00:02.6"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 1,
@@ -133,10 +130,7 @@ export const versets: Verset[] = [
       en: "WHEN THE HELP of God arrives and victory,",
       es: "Cuando llegue el auxilio de Dios y la victoria",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:02.8", "00:04.4", "00:05.6"],
-      "al-houdaifi": ["00:00.0", "00:00.8", "00:03.4", "00:04.1", "00:04.8"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 2,
@@ -231,10 +225,7 @@ export const versets: Verset[] = [
       en: "And you see men enter God's discipline horde on horde,",
       es: "y veas a los seres humanos entrando en la religión de Dios en oleadas sucesivas,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.8", "00:03.4", "00:05.5", "00:06.4", "00:07.6", "00:09.0"],
-      "al-houdaifi": ["00:00.0", "00:02.2", "00:02.8", "00:03.8", "00:04.4", "00:05.1", "00:05.7"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 3,
@@ -332,9 +323,6 @@ export const versets: Verset[] = [
       en: "Then glorify your Lord and seek His forgiveness. Verily He is relenting.",
       es: "glorifica con alabanzas a tu Señor y busca Su perdón. En verdad, Él acepta al que se arrepiente.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.5", "00:03.0", "00:04.8", "00:08.5", "00:10.7", "00:12.0"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:01.9", "00:03.0", "00:05.2", "00:06.8", "00:07.5"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
 ];

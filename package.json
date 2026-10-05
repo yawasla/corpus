@@ -9,7 +9,8 @@
     "clean:ds": "find build -name .DS_Store -delete",
     "start": "next start",
     "lint": "eslint",
-    "grammaire": "node scripts/grammaire.mjs"
+    "grammaire": "node scripts/grammaire.mjs",
+    "audio": "node scripts/audio.mjs"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

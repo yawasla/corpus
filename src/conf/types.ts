@@ -19,7 +19,7 @@ export type Verset = {
   numero: number;
   mots: Mot[];
   traduction: Record<LangueTraduction, string>;
-  // Départ ("mm:ss") de chaque mot dans le clip audio du verset ; clé absente tant que ce récitateur n'a pas d'audio pour ce verset.
+  // Départ ("mm:ss") de chaque mot dans le clip audio du verset ; [] = audio sans surlignage ; clé absente tant que ce récitateur n'a pas d'audio pour ce verset.
   audio?: Partial<Record<Recitateur, string[]>>;
 };
 

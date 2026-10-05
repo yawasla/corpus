@@ -59,10 +59,7 @@ export const versets: Verset[] = [
       en: "In the name of Allah, most benevolent, ever-merciful.",
       es: "En el nombre de Al.lah, el Clementísimo, el Misericordiosísimo.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:01.6", "00:02.7"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:01.6", "00:02.6"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 1,
@@ -121,10 +118,7 @@ export const versets: Verset[] = [
       en: 'SAY: "I SEEK refuge with the Lord of men,',
       es: "Di: «Me refugio en el Señor de los seres humanos,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:02.8", "00:04.4"],
-      "al-houdaifi": ["00:00.0", "00:00.7", "00:01.4", "00:03.2"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 2,
@@ -159,10 +153,7 @@ export const versets: Verset[] = [
       en: "The King of men,",
       es: "el Rey de los seres humanos,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.6"],
-      "al-houdaifi": ["00:00.0", "00:01.1"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 3,
@@ -197,10 +188,7 @@ export const versets: Verset[] = [
       en: "The God of men,",
       es: "el dios de los seres humanos,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.8"],
-      "al-houdaifi": ["00:00.0", "00:01.7"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 4,
@@ -259,10 +247,7 @@ export const versets: Verset[] = [
       en: "From the evil of him who breathes temptations into the minds of men,",
       es: "del mal del susurrante tentador,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.4", "00:03.0", "00:05.4"],
-      "al-houdaifi": ["00:00.0", "00:01.1", "00:02.0", "00:03.0"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 5,
@@ -331,10 +316,7 @@ export const versets: Verset[] = [
       en: "Who suggests evil thoughts to the hearts of men --",
       es: "el que susurra en el pecho de los seres humanos",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:02.0", "00:04.2", "00:05.0", "00:06.6"],
-      "al-houdaifi": ["00:00.0", "00:01.15", "00:02.1", "00:02.9", "00:04.4"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 6,
@@ -380,9 +362,6 @@ export const versets: Verset[] = [
       en: "From among the jinns and men.",
       es: "y procede de los genios y de los seres humanos.»",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.6", "00:03.8"],
-      "al-houdaifi": ["00:00.0", "00:00.9", "00:02.9"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
 ];

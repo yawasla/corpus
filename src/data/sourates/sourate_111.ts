@@ -59,10 +59,7 @@ export const versets: Verset[] = [
       en: "In the name of Allah, most benevolent, ever-merciful.",
       es: "En el nombre de Al.lah, el Clementísimo, el Misericordiosísimo.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:01.6", "00:02.7"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:01.6", "00:02.6"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 1,
@@ -133,10 +130,7 @@ export const versets: Verset[] = [
       en: "DESTROYED WILL BE the hands of Abu Lahab, and he himself will perish.",
       es: "Que perezcan las manos de Abu Lahab y que perezca él.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.2", "00:03.1", "00:04.1", "00:05.6"],
-      "al-houdaifi": ["00:00.0", "00:01.1", "00:03.3", "00:03.9", "00:05.2"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 2,
@@ -216,10 +210,7 @@ export const versets: Verset[] = [
       en: "Of no avail shall be his wealth, nor what he has acquired.",
       es: "No le servirá de nada su riqueza ni todo lo que obtuvo.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.8", "00:03.2", "00:04.3", "00:06.4", "00:07.6"],
-      "al-houdaifi": ["00:00.0", "00:02.0", "00:02.6", "00:03.2", "00:04.4", "00:05.0"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 3,
@@ -277,10 +268,7 @@ export const versets: Verset[] = [
       en: "He will be roasted in the fire,",
       es: "Entrará en un Fuego llameante",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.8", "00:03.6", "00:04.5"],
-      "al-houdaifi": ["00:00.0", "00:01.4", "00:03.0", "00:03.6"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 4,
@@ -327,10 +315,7 @@ export const versets: Verset[] = [
       en: "And his wife, the portress of fire wood,",
       es: "y también su mujer, la portadora de leña,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:02.6", "00:05.1"],
-      "al-houdaifi": ["00:00.0", "00:01.9", "00:03.9"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 5,
@@ -399,9 +384,6 @@ export const versets: Verset[] = [
       en: "Will have a strap of fibre rope around her neck.",
       es: "con una cuerda de esparto rodeando su cuello.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:00.6", "00:02.6", "00:04.4", "00:05.6"],
-      "al-houdaifi": ["00:00.0", "00:00.6", "00:01.9", "00:03.5", "00:04.5"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
 ];

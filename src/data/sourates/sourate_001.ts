@@ -59,10 +59,7 @@ export const versets: Verset[] = [
       en: "In the name of Allah, most benevolent, ever-merciful.",
       es: "En el nombre de Al.lah, el Clementísimo, el Misericordiosísimo.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:01.6", "00:02.7"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:01.6", "00:02.6"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 2,
@@ -121,10 +118,7 @@ export const versets: Verset[] = [
       en: "ALL PRAISE BE to Allah, Lord of all the worlds,",
       es: "La alabanza es para Dios, Señor de los mundos,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.2", "00:02.0", "00:02.9"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:02.0", "00:02.7"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 3,
@@ -159,10 +153,7 @@ export const versets: Verset[] = [
       en: "Most beneficent, ever-merciful,",
       es: "el Clementísimo con toda la Creación, el Misericordiosísimo con los creyentes,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.4"],
-      "al-houdaifi": ["00:00.0", "00:01.5"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 4,
@@ -209,10 +200,7 @@ export const versets: Verset[] = [
       en: "King of the Day of Judgement.",
       es: "Soberano del Día de la Recompensa.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:01.8"],
-      "al-houdaifi": ["00:00.0", "00:01.1", "00:02.0"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 5,
@@ -269,10 +257,7 @@ export const versets: Verset[] = [
       en: "You alone we worship, and to You alone turn for help.",
       es: "Solamente a Ti adoramos y solamente a Ti pedimos ayuda.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.55", "00:02.3", "00:03.4"],
-      "al-houdaifi": ["00:00.0", "00:01.35", "00:02.3", "00:03.2"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 6,
@@ -319,10 +304,7 @@ export const versets: Verset[] = [
       en: "Guide us (O Lord) to the path that is straight,",
       es: "Guíanos al camino recto,",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.3", "00:02.2"],
-      "al-houdaifi": ["00:00.0", "00:01.3", "00:02.3"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 7,
@@ -441,9 +423,6 @@ export const versets: Verset[] = [
       en: "The path of those You have blessed, Not of those who have earned Your anger, nor those who have gone astray.",
       es: "el camino de aquellos a los que Tú has agraciado; no el de aquellos con los que Tú estás disgustado, ni el de los extraviados.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.2", "00:02.1", "00:03.2", "00:04.0", "00:05.0", "00:06.1", "00:07.1", "00:08.2"],
-      "al-houdaifi": ["00:00.0", "00:01.1", "00:02.1", "00:03.1", "00:04.0", "00:04.9", "00:06.0", "00:07.0", "00:07.9"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
 ];

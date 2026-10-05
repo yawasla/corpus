@@ -59,10 +59,7 @@ export const versets: Verset[] = [
       en: "In the name of Allah, most benevolent, ever-merciful.",
       es: "En el nombre de Al.lah, el Clementísimo, el Misericordiosísimo.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:01.6", "00:02.7"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:01.6", "00:02.6"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 1,
@@ -121,10 +118,7 @@ export const versets: Verset[] = [
       en: 'SAY: "I SEEK refuge with the Lord of rising day',
       es: "Di: «Me refugio en el Señor del alba",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:00.6", "00:01.9", "00:03.4"],
-      "al-houdaifi": ["00:00.0", "00:00.8", "00:01.4", "00:02.5"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 2,
@@ -181,10 +175,7 @@ export const versets: Verset[] = [
       en: "From the evil of what He has created,",
       es: "del mal de lo que Él ha creado",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:00.8", "00:02.0", "00:02.9"],
-      "al-houdaifi": ["00:00.0", "00:01.3", "00:01.9", "00:02.5"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 3,
@@ -253,10 +244,7 @@ export const versets: Verset[] = [
       en: "And the evil of evening darkness when it overspreads,",
       es: "y del mal de la oscuridad de la noche cuando se extiende",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.2", "00:02.2", "00:04.4", "00:05.6"],
-      "al-houdaifi": ["00:00.0", "00:01.55", "00:02.1", "00:03.3", "00:04.0"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 4,
@@ -325,10 +313,7 @@ export const versets: Verset[] = [
       en: "From the evil of sorceresses who blow incantations on knots,",
       es: "y del mal de las sopladoras de nudos",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.2", "00:03.0", "00:06.0", "00:06.8"],
-      "al-houdaifi": ["00:00.0", "00:01.4", "00:02.8", "00:04.4", "00:05.0"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 5,
@@ -397,9 +382,6 @@ export const versets: Verset[] = [
       en: "From the evil of the envier when he envies.",
       es: "y del mal del envidioso cuando envidia.»",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.2", "00:02.2", "00:04.2", "00:05.4"],
-      "al-houdaifi": ["00:00.0", "00:01.4", "00:02.1", "00:03.1", "00:03.7"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
 ];

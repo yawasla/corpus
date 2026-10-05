@@ -54,29 +54,15 @@ export function LectureAudioProvider({ children }: { children: ReactNode }) {
       audio.addEventListener("loadedmetadata", () => (audio.currentTime = debut), { once: true });
     }
     audio.play();
-    descendreSiHorsChamp(verset.numero);
-  }
-
-  function hauteurBarreNavigation(): number {
-    const barre = document.querySelector(".barre-navigation");
-    return barre ? barre.getBoundingClientRect().height : 0;
+    scrollVersVerset(verset.numero);
   }
 
   function scrollVersVerset(numero: number) {
     if (infobulleVisibleRef.current) return; // n'arrache pas l'utilisateur au mot qu'il regarde
     const el = document.getElementById(`verset-${numero}`);
     if (!el) return;
-    const y = el.getBoundingClientRect().top + window.scrollY - hauteurBarreNavigation();
+    const y = el.getBoundingClientRect().top + window.scrollY;
     window.scrollTo({ top: y, behavior: "smooth" });
-  }
-
-  function descendreSiHorsChamp(numero: number) {
-    const el = document.getElementById(`verset-${numero}`);
-    if (!el) return;
-    const MARGE_DETECTION_PX = 20;
-    if (el.getBoundingClientRect().top > window.innerHeight - hauteurBarreNavigation() - MARGE_DETECTION_PX) {
-      scrollVersVerset(numero);
-    }
   }
 
   function jouer(nouveauRecitateur: Recitateur, nouveauDossier: string, versets: Verset[], depart?: number, debut?: number) {
@@ -95,9 +81,6 @@ export function LectureAudioProvider({ children }: { children: ReactNode }) {
     versetsRef.current = versets;
     setRecitateur(nouveauRecitateur);
     setDossier(nouveauDossier);
-    if (depart === undefined && versets[0]) {
-      scrollVersVerset(versets[0].numero);
-    }
     const index = depart !== undefined ? versets.findIndex((v) => v.numero === depart) : 0;
     chargerEtJouer(index >= 0 ? index : 0, debut);
     setEtat("lecture");
@@ -167,7 +150,7 @@ export function LectureAudioProvider({ children }: { children: ReactNode }) {
     const d = dossierRef.current;
     const verset = versetsRef.current[versetIndexRef.current];
     const minutages = r ? verset?.audio?.[r] : undefined;
-    if (!audio || !d || !minutages) return;
+    if (!audio || !d || !minutages?.length) return;
     const t = audio.currentTime;
     let index = 0;
     for (let i = 0; i < minutages.length; i++) {

@@ -44,4 +44,14 @@ export const SOURCES: Source[] = [
       ar: "التحليل النحوي والصرفي كلمة بكلمة (كايس ديوكس)",
     },
   },
+  {
+    nom: "EveryAyah",
+    url: "https://everyayah.com",
+    description: {
+      fr: "Récitations audio verset par verset (Al-Hussary, Al-Houdaifi)",
+      en: "Verse-by-verse audio recitations (Al-Hussary, Al-Houdaifi)",
+      es: "Recitaciones de audio verso por verso (Al-Hussary, Al-Houdaifi)",
+      ar: "التلاوات الصوتية آيةً آية (الحصري، الحذيفي)",
+    },
+  },
 ];

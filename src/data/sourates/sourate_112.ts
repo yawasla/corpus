@@ -59,10 +59,7 @@ export const versets: Verset[] = [
       en: "In the name of Allah, most benevolent, ever-merciful.",
       es: "En el nombre de Al.lah, el Clementísimo, el Misericordiosísimo.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:01.6", "00:02.7"],
-      "al-houdaifi": ["00:00.0", "00:01.0", "00:01.6", "00:02.6"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 1,
@@ -121,10 +118,7 @@ export const versets: Verset[] = [
       en: 'SAY: "HE IS God the one the most unique,',
       es: "Di: «Él es Dios, uno.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:00.6", "00:01.8", "00:02.8"],
-      "al-houdaifi": ["00:00.0", "00:00.6", "00:01.2", "00:02.0"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 2,
@@ -160,10 +154,7 @@ export const versets: Verset[] = [
       en: "God the immanently indispensable.",
       es: "Dios, eterno.",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.6"],
-      "al-houdaifi": ["00:00.0", "00:01.4"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 3,
@@ -220,10 +211,7 @@ export const versets: Verset[] = [
       en: "He has begotten no one, and is begotten of none.",
       es: "No ha engendrado ni ha sido engendrado",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:00.6", "00:01.7", "00:02.8"],
-      "al-houdaifi": ["00:00.0", "00:00.6", "00:01.3", "00:02.0"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
   {
     numero: 4,
@@ -292,9 +280,6 @@ export const versets: Verset[] = [
       en: "There is no one comparable to Him.",
       es: "y no hay otro semejante a Él.»",
     },
-    audio: {
-      "al-hussary": ["00:00.0", "00:01.0", "00:02.0", "00:03.2", "00:04.8"],
-      "al-houdaifi": ["00:00.0", "00:00.7", "00:01.4", "00:02.3", "00:03.1"]
-    },
+    audio: { "al-hussary": [], "al-houdaifi": [] },
   },
 ];
