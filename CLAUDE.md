@@ -13,8 +13,6 @@ Projet distinct de `org` (Yawasla newsroom open-source) et `com` (Yawasla platef
 
 ## ⚠️ Statut du projet : construction très progressive
 
-**On avance petit à petit, sourate par sourate, inchaAllah.**
-
 Ne pas anticiper ou développer de fonctionnalités hors du périmètre défini ci-dessous sans demande explicite. Le périmètre s'enrichira au fur et à mesure.
 
 ## Concept
@@ -24,6 +22,7 @@ Ne pas anticiper ou développer de fonctionnalités hors du périmètre défini 
 - Une sourate pas encore disponible est affichée **grisée** (non cliquable).
 - Ordre de développement : on **commence par la sourate 114 et on remonte** vers la 1.
 - Possibilité de changer de langue + détection de la langue du visiteur.
+- Lien vers la bibliothèque des compagnons.
 
 ### Page sourate
 - Texte arabe affiché **verset par verset**.
@@ -40,6 +39,15 @@ Ne pas anticiper ou développer de fonctionnalités hors du périmètre défini 
 - Une page liste tous les favoris de l'utilisateur avec possibilité d'exporter.
 - Les favoris constituent un **dico personnel du Coran**, pensé pour la révision.
 - Enregistrement en local ds le navigateur + tuto comment ne pas effacer les données (chrome, edge, etc.).
+
+### Bibliothèque des Compagnons
+- Une page liste tous les Compagnons présents dans les recueils retenus (moins de 100), avec une page dédiée par Compagnon.
+- Chaque page décrit la personnalité du Compagnon : une courte synthèse, puis les hadiths cités, limités à quatre recueils : Sahih al-Bukhari, Al-Muwatta, Riyad as-Salihin et Bulugh al-Maram.
+- On n'analyse pas le contenu juridique d'un hadith, mais ce qu'il révèle des qualités du Compagnon.
+- Chaque trait mentionné dans la synthèse s'appuie sur un hadith cité sur la page.
+- Chaque hadith est affiché avec son texte arabe, sa référence et son degré d'authenticité.
+- Petit projet : les pages restent courtes, pas d'étude détaillée.
+- Texte des hadiths récupéré depuis des sources open source (à identifier), traduction FR/EN/ES réalisée par nos soins et indiquée comme telle sur le site.
 
 ## Exigences non-fonctionnelles
 
@@ -78,9 +86,9 @@ Pendant la lecture, chaque nouveau verset est placé en haut de l'écran, sauf s
 
 Tout ce qui n'est pas listé dans « Concept » ci-dessus à ne pas développer sans demande explicite. Exemple d'évolutions possibles :
 
-- Récitation avec les lettres qui se colorisent.
 - Ajout d'autres traductions.
 - Recherche plein texte.
+- API Corpus des pages des Compagnons.
 
 ---
 
