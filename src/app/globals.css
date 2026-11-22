@@ -1,3 +1,9 @@
+/* Variable fournie par next/font (src/app/layout.tsx) : déclarée ici pour l'IDE, sans valeur imposée. */
+@property --font-amiri {
+  syntax: "*";
+  inherits: true;
+}
+
 body {
   background: var(--bs-body-bg);
   color: var(--bs-body-color);
@@ -11,7 +17,7 @@ body {
 }
 
 .titre-accueil {
-  font-family: var(--font-amiri);
+  font-family: var(--font-amiri), serif;
   font-size: clamp(4rem, 8vw, 3.5rem);
 }
 
@@ -234,7 +240,7 @@ body {
 }
 
 .arabic-text {
-  font-family: var(--font-amiri);
+  font-family: var(--font-amiri), serif;
   font-size: clamp(2.2rem, 5vw, 3rem);
   line-height: 2.2;
   display: flex;
@@ -486,7 +492,7 @@ body {
 }
 
 .compagnon-trait__arabe {
-  font-family: var(--font-amiri);
+  font-family: var(--font-amiri), serif;
   font-size: 1.35rem;
   line-height: 2.1;
   margin: 0.5rem 0;
@@ -503,7 +509,7 @@ body {
 
 /* Fiche en arabe : titres et badges en Amiri, au moins aussi grands que le texte du hadith (lang posé sur <main>, connu dès le rendu statique). */
 main[lang="ar"] .compagnon-trait__titre {
-  font-family: var(--font-amiri);
+  font-family: var(--font-amiri), serif;
   font-size: 1.5rem;
   font-weight: 700;
 }
@@ -513,16 +519,16 @@ main[lang="ar"] .compagnon-traits {
 }
 
 main[lang="ar"] .compagnon-trait::marker {
-  font-family: var(--font-amiri);
+  font-family: var(--font-amiri), serif;
   font-size: 1.5rem;
 }
 
 main[lang="ar"] .compagnon-trait__qualite {
-  font-family: var(--font-amiri);
+  font-family: var(--font-amiri), serif;
   font-size: 0.95rem;
 }
 
 main[lang="ar"] .compagnon-resume {
-  font-family: var(--font-amiri);
+  font-family: var(--font-amiri), serif;
   font-size: 1.25rem;
 }
