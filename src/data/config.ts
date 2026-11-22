@@ -1,4 +1,5 @@
-import type { Verset, NomSourate, Langue } from "@/conf/types";
+import type { Verset, NomSourate, Langue, FicheCompagnon } from "@/conf/types";
+import { fiche as ficheCompagnon1 } from "./compagnons/compagnon_001";
 import { versets as versetsSourate1 } from "./sourates/sourate_001";
 import { versets as versetsSourate110 } from "./sourates/sourate_110";
 import { versets as versetsSourate111 } from "./sourates/sourate_111";
@@ -154,4 +155,125 @@ const versetsParId: Record<number, Verset[]> = {
 
 export function getVersets(id: number): Verset[] {
   return versetsParId[id] ?? [];
+}
+
+// --- Compagnons --- (repère lu par scripts/audio.mjs et scripts/compagnons.mjs, ne pas renommer)
+
+export type Compagnon = {
+  id: number;
+  slug: string;
+  nom: { arabe: string; transliteration: string };
+  disponible: boolean;
+};
+
+// Premier jet (10 promis au Paradis, épouses du Prophète, grands rapporteurs...) à vérifier contre les quatre recueils retenus ; un Compagnon non disponible est grisé.
+export const compagnons: Compagnon[] = [
+  { id: 1, slug: "abu-bakr", nom: { arabe: "أبو بكر الصديق", transliteration: "Abu Bakr as-Siddiq" }, disponible: true },
+  { id: 2, slug: "umar", nom: { arabe: "عمر بن الخطاب", transliteration: "Umar ibn al-Khattab" }, disponible: false },
+  { id: 3, slug: "uthman", nom: { arabe: "عثمان بن عفان", transliteration: "Uthman ibn Affan" }, disponible: false },
+  { id: 4, slug: "ali", nom: { arabe: "علي بن أبي طالب", transliteration: "Ali ibn Abi Talib" }, disponible: false },
+  { id: 5, slug: "talha", nom: { arabe: "طلحة بن عبيد الله", transliteration: "Talha ibn Ubaydillah" }, disponible: false },
+  { id: 6, slug: "az-zubayr", nom: { arabe: "الزبير بن العوام", transliteration: "Az-Zubayr ibn al-Awwam" }, disponible: false },
+  { id: 7, slug: "abd-ar-rahman-ibn-awf", nom: { arabe: "عبد الرحمن بن عوف", transliteration: "Abd ar-Rahman ibn Awf" }, disponible: false },
+  { id: 8, slug: "saad-ibn-abi-waqqas", nom: { arabe: "سعد بن أبي وقاص", transliteration: "Sa\'d ibn Abi Waqqas" }, disponible: false },
+  { id: 9, slug: "said-ibn-zayd", nom: { arabe: "سعيد بن زيد", transliteration: "Sa\'id ibn Zayd" }, disponible: false },
+  { id: 10, slug: "abu-ubayda", nom: { arabe: "أبو عبيدة بن الجراح", transliteration: "Abu Ubayda ibn al-Jarrah" }, disponible: false },
+  { id: 11, slug: "khadija", nom: { arabe: "خديجة بنت خويلد", transliteration: "Khadija bint Khuwaylid" }, disponible: false },
+  { id: 12, slug: "aisha", nom: { arabe: "عائشة بنت أبي بكر", transliteration: "Aisha bint Abi Bakr" }, disponible: false },
+  { id: 13, slug: "fatima", nom: { arabe: "فاطمة الزهراء", transliteration: "Fatima az-Zahra" }, disponible: false },
+  { id: 14, slug: "hafsa", nom: { arabe: "حفصة بنت عمر", transliteration: "Hafsa bint Umar" }, disponible: false },
+  { id: 15, slug: "umm-salama", nom: { arabe: "أم سلمة", transliteration: "Umm Salama" }, disponible: false },
+  { id: 16, slug: "hamza", nom: { arabe: "حمزة بن عبد المطلب", transliteration: "Hamza ibn Abd al-Muttalib" }, disponible: false },
+  { id: 17, slug: "al-abbas", nom: { arabe: "العباس بن عبد المطلب", transliteration: "Al-Abbas ibn Abd al-Muttalib" }, disponible: false },
+  { id: 18, slug: "al-hasan", nom: { arabe: "الحسن بن علي", transliteration: "Al-Hasan ibn Ali" }, disponible: false },
+  { id: 19, slug: "al-husayn", nom: { arabe: "الحسين بن علي", transliteration: "Al-Husayn ibn Ali" }, disponible: false },
+  { id: 20, slug: "ibn-abbas", nom: { arabe: "عبد الله بن عباس", transliteration: "Abd Allah ibn Abbas" }, disponible: false },
+  { id: 21, slug: "ibn-umar", nom: { arabe: "عبد الله بن عمر", transliteration: "Abd Allah ibn Umar" }, disponible: false },
+  { id: 22, slug: "ibn-masud", nom: { arabe: "عبد الله بن مسعود", transliteration: "Abd Allah ibn Mas\'ud" }, disponible: false },
+  { id: 23, slug: "abu-hurayra", nom: { arabe: "أبو هريرة", transliteration: "Abu Hurayra" }, disponible: false },
+  { id: 24, slug: "anas-ibn-malik", nom: { arabe: "أنس بن مالك", transliteration: "Anas ibn Malik" }, disponible: false },
+  { id: 25, slug: "jabir-ibn-abd-allah", nom: { arabe: "جابر بن عبد الله", transliteration: "Jabir ibn Abd Allah" }, disponible: false },
+  { id: 26, slug: "abu-said-al-khudri", nom: { arabe: "أبو سعيد الخدري", transliteration: "Abu Sa\'id al-Khudri" }, disponible: false },
+  { id: 27, slug: "abd-allah-ibn-amr", nom: { arabe: "عبد الله بن عمرو بن العاص", transliteration: "Abd Allah ibn Amr ibn al-As" }, disponible: false },
+  { id: 28, slug: "muadh-ibn-jabal", nom: { arabe: "معاذ بن جبل", transliteration: "Mu\'adh ibn Jabal" }, disponible: false },
+  { id: 29, slug: "ubayy-ibn-kab", nom: { arabe: "أبي بن كعب", transliteration: "Ubayy ibn Ka\'b" }, disponible: false },
+  { id: 30, slug: "zayd-ibn-thabit", nom: { arabe: "زيد بن ثابت", transliteration: "Zayd ibn Thabit" }, disponible: false },
+  { id: 31, slug: "abu-musa-al-ashari", nom: { arabe: "أبو موسى الأشعري", transliteration: "Abu Musa al-Ash\'ari" }, disponible: false },
+  { id: 32, slug: "abu-dharr", nom: { arabe: "أبو ذر الغفاري", transliteration: "Abu Dharr al-Ghifari" }, disponible: false },
+  { id: 33, slug: "salman-al-farisi", nom: { arabe: "سلمان الفارسي", transliteration: "Salman al-Farisi" }, disponible: false },
+  { id: 34, slug: "bilal", nom: { arabe: "بلال بن رباح", transliteration: "Bilal ibn Rabah" }, disponible: false },
+  { id: 35, slug: "ammar-ibn-yasir", nom: { arabe: "عمار بن ياسر", transliteration: "Ammar ibn Yasir" }, disponible: false },
+  { id: 36, slug: "abu-ad-darda", nom: { arabe: "أبو الدرداء", transliteration: "Abu ad-Darda" }, disponible: false },
+  { id: 37, slug: "khalid-ibn-al-walid", nom: { arabe: "خالد بن الوليد", transliteration: "Khalid ibn al-Walid" }, disponible: false },
+  { id: 38, slug: "amr-ibn-al-as", nom: { arabe: "عمرو بن العاص", transliteration: "Amr ibn al-As" }, disponible: false },
+  { id: 39, slug: "muawiya", nom: { arabe: "معاوية بن أبي سفيان", transliteration: "Mu\'awiya ibn Abi Sufyan" }, disponible: false },
+  { id: 40, slug: "saad-ibn-muadh", nom: { arabe: "سعد بن معاذ", transliteration: "Sa\'d ibn Mu\'adh" }, disponible: false },
+  { id: 41, slug: "saad-ibn-ubada", nom: { arabe: "سعد بن عبادة", transliteration: "Sa\'d ibn Ubada" }, disponible: false },
+  { id: 42, slug: "usama-ibn-zayd", nom: { arabe: "أسامة بن زيد", transliteration: "Usama ibn Zayd" }, disponible: false },
+  { id: 43, slug: "zayd-ibn-haritha", nom: { arabe: "زيد بن حارثة", transliteration: "Zayd ibn Haritha" }, disponible: false },
+  { id: 44, slug: "jafar-ibn-abi-talib", nom: { arabe: "جعفر بن أبي طالب", transliteration: "Ja\'far ibn Abi Talib" }, disponible: false },
+  { id: 45, slug: "musab-ibn-umayr", nom: { arabe: "مصعب بن عمير", transliteration: "Mus\'ab ibn Umayr" }, disponible: false },
+  { id: 46, slug: "abd-allah-ibn-rawaha", nom: { arabe: "عبد الله بن رواحة", transliteration: "Abd Allah ibn Rawaha" }, disponible: false },
+  { id: 47, slug: "hudhayfa-ibn-al-yaman", nom: { arabe: "حذيفة بن اليمان", transliteration: "Hudhayfa ibn al-Yaman" }, disponible: false },
+  { id: 48, slug: "abu-ayyub-al-ansari", nom: { arabe: "أبو أيوب الأنصاري", transliteration: "Abu Ayyub al-Ansari" }, disponible: false },
+  { id: 49, slug: "al-bara-ibn-azib", nom: { arabe: "البراء بن عازب", transliteration: "Al-Bara ibn Azib" }, disponible: false },
+  { id: 50, slug: "abu-talha", nom: { arabe: "أبو طلحة الأنصاري", transliteration: "Abu Talha al-Ansari" }, disponible: false },
+  { id: 51, slug: "umm-sulaym", nom: { arabe: "أم سليم", transliteration: "Umm Sulaym" }, disponible: false },
+  { id: 52, slug: "asma-bint-abi-bakr", nom: { arabe: "أسماء بنت أبي بكر", transliteration: "Asma bint Abi Bakr" }, disponible: false },
+  { id: 53, slug: "sawda", nom: { arabe: "سودة بنت زمعة", transliteration: "Sawda bint Zam\'a" }, disponible: false },
+  { id: 54, slug: "zaynab-bint-jahsh", nom: { arabe: "زينب بنت جحش", transliteration: "Zaynab bint Jahsh" }, disponible: false },
+  { id: 55, slug: "maymuna", nom: { arabe: "ميمونة بنت الحارث", transliteration: "Maymuna bint al-Harith" }, disponible: false },
+  { id: 56, slug: "umm-habiba", nom: { arabe: "أم حبيبة", transliteration: "Umm Habiba" }, disponible: false },
+  { id: 57, slug: "juwayriya", nom: { arabe: "جويرية بنت الحارث", transliteration: "Juwayriya bint al-Harith" }, disponible: false },
+  { id: 58, slug: "safiyya", nom: { arabe: "صفية بنت حيي", transliteration: "Safiyya bint Huyayy" }, disponible: false },
+  { id: 59, slug: "sumayya", nom: { arabe: "سمية بنت خياط", transliteration: "Sumayya bint Khayyat" }, disponible: false },
+  { id: 60, slug: "ibn-az-zubayr", nom: { arabe: "عبد الله بن الزبير", transliteration: "Abd Allah ibn az-Zubayr" }, disponible: false },
+  { id: 61, slug: "imran-ibn-husayn", nom: { arabe: "عمران بن حصين", transliteration: "Imran ibn Husayn" }, disponible: false },
+  { id: 62, slug: "abu-qatada", nom: { arabe: "أبو قتادة الأنصاري", transliteration: "Abu Qatada al-Ansari" }, disponible: false },
+  { id: 63, slug: "sahl-ibn-sad", nom: { arabe: "سهل بن سعد", transliteration: "Sahl ibn Sa\'d" }, disponible: false },
+  { id: 64, slug: "an-numan-ibn-bashir", nom: { arabe: "النعمان بن بشير", transliteration: "An-Nu\'man ibn Bashir" }, disponible: false },
+  { id: 65, slug: "ubada-ibn-as-samit", nom: { arabe: "عبادة بن الصامت", transliteration: "Ubada ibn as-Samit" }, disponible: false },
+  { id: 66, slug: "abu-bakra", nom: { arabe: "أبو بكرة", transliteration: "Abu Bakra" }, disponible: false },
+  { id: 67, slug: "jarir-ibn-abd-allah", nom: { arabe: "جرير بن عبد الله البجلي", transliteration: "Jarir ibn Abd Allah al-Bajali" }, disponible: false },
+  { id: 68, slug: "al-mughira-ibn-shuba", nom: { arabe: "المغيرة بن شعبة", transliteration: "Al-Mughira ibn Shu\'ba" }, disponible: false },
+  { id: 69, slug: "abu-umama", nom: { arabe: "أبو أمامة الباهلي", transliteration: "Abu Umama al-Bahili" }, disponible: false },
+  { id: 70, slug: "uqba-ibn-amir", nom: { arabe: "عقبة بن عامر", transliteration: "Uqba ibn Amir" }, disponible: false },
+  { id: 71, slug: "abu-masud-al-ansari", nom: { arabe: "أبو مسعود الأنصاري", transliteration: "Abu Mas\'ud al-Ansari" }, disponible: false },
+  { id: 72, slug: "tamim-ad-dari", nom: { arabe: "تميم الداري", transliteration: "Tamim ad-Dari" }, disponible: false },
+  { id: 73, slug: "suhayb-ar-rumi", nom: { arabe: "صهيب الرومي", transliteration: "Suhayb ar-Rumi" }, disponible: false },
+  { id: 74, slug: "khabbab-ibn-al-aratt", nom: { arabe: "خباب بن الأرت", transliteration: "Khabbab ibn al-Aratt" }, disponible: false },
+  { id: 75, slug: "al-miqdad", nom: { arabe: "المقداد بن الأسود", transliteration: "Al-Miqdad ibn al-Aswad" }, disponible: false },
+  { id: 76, slug: "utban-ibn-malik", nom: { arabe: "عتبان بن مالك", transliteration: "Itban ibn Malik" }, disponible: false },
+  { id: 77, slug: "kab-ibn-malik", nom: { arabe: "كعب بن مالك", transliteration: "Ka\'b ibn Malik" }, disponible: false },
+  { id: 78, slug: "hassan-ibn-thabit", nom: { arabe: "حسان بن ثابت", transliteration: "Hassan ibn Thabit" }, disponible: false },
+  { id: 79, slug: "abd-allah-ibn-salam", nom: { arabe: "عبد الله بن سلام", transliteration: "Abd Allah ibn Salam" }, disponible: false },
+  { id: 80, slug: "abu-sufyan", nom: { arabe: "أبو سفيان بن حرب", transliteration: "Abu Sufyan ibn Harb" }, disponible: false },
+  { id: 81, slug: "ikrima-ibn-abi-jahl", nom: { arabe: "عكرمة بن أبي جهل", transliteration: "Ikrima ibn Abi Jahl" }, disponible: false },
+  { id: 82, slug: "salim-mawla-abi-hudhayfa", nom: { arabe: "سالم مولى أبي حذيفة", transliteration: "Salim mawla Abi Hudhayfa" }, disponible: false },
+  { id: 83, slug: "abu-hudhayfa", nom: { arabe: "أبو حذيفة بن عتبة", transliteration: "Abu Hudhayfa ibn Utba" }, disponible: false },
+  { id: 84, slug: "uthman-ibn-mazun", nom: { arabe: "عثمان بن مظعون", transliteration: "Uthman ibn Maz\'un" }, disponible: false },
+  { id: 85, slug: "anas-ibn-an-nadr", nom: { arabe: "أنس بن النضر", transliteration: "Anas ibn an-Nadr" }, disponible: false },
+  { id: 86, slug: "al-arqam", nom: { arabe: "الأرقم بن أبي الأرقم", transliteration: "Al-Arqam ibn Abi al-Arqam" }, disponible: false },
+  { id: 87, slug: "umm-ayman", nom: { arabe: "أم أيمن", transliteration: "Umm Ayman" }, disponible: false },
+  { id: 88, slug: "umm-atiyya", nom: { arabe: "أم عطية", transliteration: "Umm Atiyya" }, disponible: false },
+  { id: 89, slug: "ruqayya", nom: { arabe: "رقية بنت محمد", transliteration: "Ruqayya bint Muhammad" }, disponible: false },
+  { id: 90, slug: "zaynab-bint-muhammad", nom: { arabe: "زينب بنت محمد", transliteration: "Zaynab bint Muhammad" }, disponible: false },
+  { id: 91, slug: "umm-kulthum", nom: { arabe: "أم كلثوم بنت محمد", transliteration: "Umm Kulthum bint Muhammad" }, disponible: false },
+  { id: 92, slug: "al-fadl-ibn-abbas", nom: { arabe: "الفضل بن عباس", transliteration: "Al-Fadl ibn Abbas" }, disponible: false },
+  { id: 93, slug: "thabit-ibn-qays", nom: { arabe: "ثابت بن قيس", transliteration: "Thabit ibn Qays" }, disponible: false },
+  { id: 94, slug: "zayd-ibn-arqam", nom: { arabe: "زيد بن أرقم", transliteration: "Zayd ibn Arqam" }, disponible: false },
+  { id: 95, slug: "abd-allah-ibn-mughaffal", nom: { arabe: "عبد الله بن مغفل", transliteration: "Abd Allah ibn Mughaffal" }, disponible: false },
+  { id: 96, slug: "wail-ibn-hujr", nom: { arabe: "وائل بن حجر", transliteration: "Wa\'il ibn Hujr" }, disponible: false },
+  { id: 97, slug: "abu-juhayfa", nom: { arabe: "أبو جحيفة", transliteration: "Abu Juhayfa" }, disponible: false },
+  { id: 98, slug: "rafi-ibn-khadij", nom: { arabe: "رافع بن خديج", transliteration: "Rafi\' ibn Khadij" }, disponible: false },
+  { id: 99, slug: "samura-ibn-jundab", nom: { arabe: "سمرة بن جندب", transliteration: "Samura ibn Jundab" }, disponible: false },
+  { id: 100, slug: "asma-bint-umays", nom: { arabe: "أسماء بنت عميس", transliteration: "Asma bint Umays" }, disponible: false },
+];
+
+const fichesParId: Record<number, FicheCompagnon> = {
+  1: ficheCompagnon1,
+};
+
+export function getFiche(id: number): FicheCompagnon | undefined {
+  return fichesParId[id];
 }

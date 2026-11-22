@@ -17,6 +17,10 @@ type Libelles = {
   recitateur: string;
   codeSource: string;
   licenceCode: string;
+  coran: string;
+  compagnons: string;
+  bientot: string;
+  lireWikipedia: string;
 };
 
 export const LIBELLES: Record<Langue, Libelles> = {
@@ -37,6 +41,10 @@ export const LIBELLES: Record<Langue, Libelles> = {
     recitateur: "Récitateur",
     codeSource: "Code source",
     licenceCode: "Licence MIT",
+    coran: "Le Saint Coran",
+    compagnons: "Les Compagnons",
+    bientot: "Bientôt disponible.",
+    lireWikipedia: "Lire sur Wikipédia",
   },
   en: {
     sommaire: "Contents",
@@ -55,6 +63,10 @@ export const LIBELLES: Record<Langue, Libelles> = {
     recitateur: "Reciter",
     codeSource: "Source code",
     licenceCode: "MIT license",
+    coran: "The Holy Quran",
+    compagnons: "The Companions",
+    bientot: "Coming soon.",
+    lireWikipedia: "Read on Wikipedia",
   },
   es: {
     sommaire: "Índice",
@@ -73,6 +85,10 @@ export const LIBELLES: Record<Langue, Libelles> = {
     recitateur: "Recitador",
     codeSource: "Código fuente",
     licenceCode: "Licencia MIT",
+    coran: "El Sagrado Corán",
+    compagnons: "Los Compañeros",
+    bientot: "Próximamente.",
+    lireWikipedia: "Leer en Wikipedia",
   },
   ar: {
     sommaire: "الفهرس",
@@ -91,5 +107,9 @@ export const LIBELLES: Record<Langue, Libelles> = {
     recitateur: "القارئ",
     codeSource: "الكود المصدري",
     licenceCode: "رخصة MIT",
+    coran: "القرآن الكريم",
+    compagnons: "الصحابة",
+    bientot: "قريبًا.",
+    lireWikipedia: "اقرأ في ويكيبيديا",
   },
 };

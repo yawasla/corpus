@@ -13,6 +13,7 @@ A Quran reading app, verse by verse, with an official multilingual translation (
 - [Quick start](#quick-start)
 - [Tech stack](#tech-stack)
 - [Data sources & licenses](#data-sources--licenses)
+- [Companions: hadith selection method](#companions-hadith-selection-method)
 - [Contact](#contact)
 - [Responsibility](#responsibility)
 - [License](#license)
@@ -78,6 +79,21 @@ Content (text, translations, grammatical annotation) comes from two third-party 
 - **Word-by-word grammatical analysis** — [Quranic Arabic Corpus](https://corpus.quran.com) (Kais Dukes)
 
 See the "Sources de données" section of [CLAUDE.md](./CLAUDE.md) for the exact files and license obligations (no modification of the text/annotation, attribution and link visible on the site).
+
+Hadiths for the Companions pages (Arabic text, displayed verbatim):
+
+- **Sahih al-Bukhari, Al-Muwatta** — [hadith-api](https://github.com/fawazahmed0/hadith-api) (public domain, Unlicense)
+- **Riyad as-Salihin, Bulugh al-Maram** — [OpenITI](https://kitab-project.org/docs/openITI) (CC BY-NC-SA 4.0, files `0676Nawawi.RiyadSalihin.Shamela0012014-ara1` and `0852IbnHajarCasqalani.BulughMaram.Shamela0009111-ara1`): non-commercial use, our translations of these hadiths released under the same license
+
+## Companions: hadith selection method
+
+Each Companion page keeps only hadiths that reveal one of the Companion's qualities, never their legal content.
+
+1. **Candidate search** (`npm run compagnons`) — the Companion's name is searched in the four collections; hadiths where he is only a narrator are set aside.
+2. **AI pre-filter** (`npm run filtre`, Mistral API) — each candidate is sorted as useful, not useful, or to be decided by a human, with a short trait and an exact quote; the rules are tuned on hand-validated samples.
+3. **Editorial review** — every hadith, trait and translation shown on the site is checked by hand.
+
+The AI only sorts candidates: the Arabic text displayed is always copied verbatim from the sources.
 
 ## Contact
 

@@ -101,7 +101,7 @@ function personne(code, langue) {
 
 function lireCorpus() {
   const mots = new Map();
-  for (const ligne of readFileSync(`${RACINE}/sources/quranic-corpus-morphology-0.4.txt`, "utf8").split("\n")) {
+  for (const ligne of readFileSync(`${RACINE}/sources/coran/quranic-corpus-morphology-0.4.txt`, "utf8").split("\n")) {
     const m = ligne.match(/^\((\d+):(\d+):(\d+):\d+\)\t\S*\t\S+\t(\S+)/);
     if (!m) continue;
     const cle = `${m[1]}:${m[2]}:${m[3]}`;

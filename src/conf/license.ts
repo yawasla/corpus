@@ -21,9 +21,10 @@ export type Source = {
   nom: string;
   url: string;
   description: Record<Langue, string>;
+  licence?: { nom: string; url: string };
 };
 
-export const SOURCES: Source[] = [
+export const SOURCES_CORAN: Source[] = [
   {
     nom: "Tanzil Project",
     url: "https://tanzil.net",
@@ -55,3 +56,31 @@ export const SOURCES: Source[] = [
     },
   },
 ];
+
+// OpenITI (CC BY-NC-SA 4.0) : crédit + lien licence sur le site, URI des fichiers cités dans le README.
+const CC_BY_NC_SA = { nom: "CC BY-NC-SA 4.0", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/" };
+
+export const SOURCES_COMPAGNONS: Source[] = [
+  {
+    nom: "hadith-api",
+    url: "https://github.com/fawazahmed0/hadith-api",
+    description: {
+      fr: "Texte arabe de Sahih al-Bukhari et d'Al-Muwatta (domaine public)",
+      en: "Arabic text of Sahih al-Bukhari and Al-Muwatta (public domain)",
+      es: "Texto árabe de Sahih al-Bujari y Al-Muwatta (dominio público)",
+      ar: "النص العربي لصحيح البخاري والموطأ (ملكية عامة)",
+    },
+  },
+  {
+    nom: "OpenITI",
+    url: "https://kitab-project.org/docs/openITI",
+    description: {
+      fr: "Texte arabe de Riyad as-Salihin et Bulugh al-Maram",
+      en: "Arabic text of Riyad as-Salihin and Bulugh al-Maram",
+      es: "Texto árabe de Riyad as-Salihin y Bulugh al-Maram",
+      ar: "النص العربي لرياض الصالحين وبلوغ المرام",
+    },
+    licence: CC_BY_NC_SA,
+  },
+];
+

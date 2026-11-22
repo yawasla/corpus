@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import { LIBELLES } from "@/conf/libelles";
-import { NOMS_RECITATEURS, SOURCES, GITHUB_URL } from "@/conf/license";
+import { NOMS_RECITATEURS, SOURCES_CORAN, SOURCES_COMPAGNONS, GITHUB_URL } from "@/conf/license";
 import { TOUS_RECITATEURS } from "@/conf/audio";
 import type { Langue } from "@/conf/types";
 
@@ -10,6 +11,9 @@ const DELAI_FERMETURE_MS = 300;
 
 export default function MenuInfo({ langue }: { langue: Langue }) {
   const libelles = LIBELLES[langue];
+  // Sources propres à la rubrique en cours : Coran (dont récitateurs) ou Compagnons (hadiths).
+  const compagnons = /^(?:\/(?:en|es|ar))?\/compagnons(?:\/|$)/.test(usePathname());
+  const sources = compagnons ? SOURCES_COMPAGNONS : SOURCES_CORAN;
   const [ouvert, setOuvert] = useState(false);
   const conteneurRef = useRef<HTMLDivElement>(null);
   const fermeture = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -64,11 +68,13 @@ export default function MenuInfo({ langue }: { langue: Langue }) {
       {ouvert && (
         <div className="menu-info__panneau" role="dialog" aria-label={libelles.sourcesTitre}>
           <p className="menu-info__titre">{libelles.sourcesTitre}</p>
-          <p className="menu-info__ligne">
-            <strong>{libelles.recitateur}</strong> :{" "}
-            {TOUS_RECITATEURS.map((r) => NOMS_RECITATEURS[r][langue]).join(", ")}
-          </p>
-          {SOURCES.map((source) => (
+          {!compagnons && (
+            <p className="menu-info__ligne">
+              <strong>{libelles.recitateur}</strong> :{" "}
+              {TOUS_RECITATEURS.map((r) => NOMS_RECITATEURS[r][langue]).join(", ")}
+            </p>
+          )}
+          {sources.map((source) => (
             <p className="menu-info__ligne" key={source.nom}>
               <strong>
                 <a href={source.url} target="_blank" rel="noopener noreferrer">
@@ -76,6 +82,14 @@ export default function MenuInfo({ langue }: { langue: Langue }) {
                 </a>
               </strong>{" "}
               : {source.description[langue]}
+              {source.licence && (
+                <>
+                  {" — "}
+                  <a href={source.licence.url} target="_blank" rel="noopener noreferrer">
+                    {source.licence.nom}
+                  </a>
+                </>
+              )}
             </p>
           ))}
           <p className="menu-info__ligne">

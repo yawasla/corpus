@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { padId, titreSourate, type Sourate } from "@/data/summary";
+import { padId, titreSourate, type Sourate } from "@/data/config";
 import type { Langue } from "@/conf/types";
 import { urlPourLangue } from "@/conf/locale";
 

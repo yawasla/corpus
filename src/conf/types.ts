@@ -28,3 +28,22 @@ export type NomSourate = {
   transliteration: string;
   sens?: Record<LangueTraduction, string>;
 };
+
+// Fiche Compagnon (src/data/compagnons/compagnon_NNN.ts, préremplie par scripts/fiche.mjs).
+export type HadithFiche = {
+  recueil: string;
+  numero: number;
+  // Texte arabe copié verbatim depuis sources/hadith (jamais modifié).
+  arabe: string;
+  degre: string;
+  // Traduction Yawasla depuis l'arabe (scripts/traduction-mistral.mjs), relue à la main.
+  traduction?: Partial<Record<LangueTraduction, string>>;
+};
+
+export type FicheCompagnon = {
+  wikipedia: Record<Langue, string>;
+  resume: Record<Langue, string>;
+  // Trait rédigé en anglais par la synthèse, traductions ajoutées à la relecture.
+  // cle : trait d'origine de la synthèse, sert à retrouver les traductions quand la fiche est régénérée.
+  traits: { trait: Partial<Record<Langue, string>> & { en: string; cle?: string }; hadith: HadithFiche }[];
+};

@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Fichiers de travail internes (extraits sunnah.com non affichables)
+/analyse
+
+# Sources tierces (Coran, hadiths) : non republiées dans le dépôt, à récupérer selon CLAUDE.md
+/sources

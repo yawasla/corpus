@@ -14,7 +14,7 @@ function erreur(message) {
 }
 
 function dossierSourate(sourate) {
-  const resume = readFileSync(`${RACINE}/src/data/summary.ts`, "utf8");
+  const resume = readFileSync(`${RACINE}/src/data/config.ts`, "utf8").split("// --- Compagnons ---")[0];
   const slug = resume.match(new RegExp(`\\{ id: ${sourate}, slug: "([^"]+)"`))?.[1] ?? erreur(`sourate ${sourate} absente de summary.ts`);
   return `${String(sourate).padStart(3, "0")}-${slug}`;
 }

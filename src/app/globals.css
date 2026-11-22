@@ -15,6 +15,30 @@ body {
   font-size: clamp(4rem, 8vw, 3.5rem);
 }
 
+.en-tete__logo {
+  width: 10rem;
+  height: auto;
+}
+
+.en-tete__liens {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.en-tete__lien {
+  color: var(--bs-secondary-color);
+  text-decoration: none;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+.en-tete__lien:hover,
+.en-tete__lien--actif {
+  color: var(--bs-body-color);
+  border-bottom-color: #1f9960;
+}
+
 @media (min-width: 576px) {
   .sommaire-liste {
     columns: 2;
@@ -327,6 +351,19 @@ body {
   margin: 0 auto;
 }
 
+/* Pages de lecture (sourate, Compagnon) : largeur réduite progressivement, points de rupture Bootstrap md/lg. */
+@media (min-width: 768px) {
+  .page-shell--lecture {
+    width: 82.5%;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-shell--lecture {
+    width: 75%;
+  }
+}
+
 .mot-infobulle span {
   font-size: 1em;
 }
@@ -404,4 +441,33 @@ body {
   bottom: 0;
   left: 0;
   transform: rotate(270deg);
+}
+
+.compagnon-resume {
+  margin: 1.5rem 0 2rem;
+  line-height: 1.7;
+}
+
+.compagnon-traits {
+  padding-inline-start: 1.25rem;
+}
+
+.compagnon-trait {
+  margin-bottom: 2rem;
+}
+
+.compagnon-trait__arabe {
+  font-family: var(--font-amiri);
+  font-size: 1.35rem;
+  line-height: 2.1;
+  margin: 0.5rem 0;
+}
+
+.compagnon-trait__traduction {
+  margin: 0.25rem 0 0.5rem;
+  line-height: 1.6;
+}
+
+.compagnon-trait__ref {
+  font-size: 0.85rem;
 }

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { sourates, padId } from "@/data/summary";
+import { sourates, padId } from "@/data/config";
 import PageSourate from "@/components/PageSourate";
 import { alternatesPour } from "@/conf/locale";
 

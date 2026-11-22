@@ -10,7 +10,11 @@
     "start": "next start",
     "lint": "eslint",
     "grammaire": "node scripts/grammaire.mjs",
-    "audio": "node scripts/audio.mjs"
+    "audio": "node scripts/audio.mjs",
+    "compagnons": "node scripts/compagnons.mjs",
+    "filtre": "node scripts/filtre-mistral.mjs",
+    "fiche": "node scripts/fiche.mjs",
+    "traduction": "node scripts/traduction-mistral.mjs"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",

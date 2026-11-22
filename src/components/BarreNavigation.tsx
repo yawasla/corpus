@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { sourates, padId, titreSourate, getVersets } from "@/data/summary";
+import { sourates, padId, titreSourate, getVersets } from "@/data/config";
 import { langueDePathname, urlPourLangue } from "@/conf/locale";
 import { LIBELLES } from "@/conf/libelles";
 import { aAudio } from "@/conf/audio";
@@ -19,6 +19,8 @@ export default function BarreNavigation() {
   const pathname = usePathname();
   const langue = langueDePathname(pathname);
   const libelles = LIBELLES[langue];
+  // Rubrique Compagnons : sommaire vers la liste des Compagnons, pas de translittération (propre au texte coranique).
+  const compagnons = /^(?:\/(?:en|es|ar))?\/compagnons(?:\/|$)/.test(pathname);
   const { theme, basculerTheme } = useTheme();
 
   // Le layout racine ne connaît pas le segment [locale] au rendu serveur : on corrige lang/dir sur <html> ici une fois la langue connue via l'URL.
@@ -47,7 +49,7 @@ export default function BarreNavigation() {
     <nav className="barre-navigation">
       <div className="barre-navigation__groupe">
         <Link
-          href={urlPourLangue("/", langue)}
+          href={urlPourLangue(compagnons ? "/compagnons" : "/", langue)}
           className="barre-navigation__bouton"
           title={libelles.sommaire}
           aria-label={libelles.sommaire}
@@ -77,19 +79,21 @@ export default function BarreNavigation() {
       </div>
 
       <div className="barre-navigation__groupe">
-        <label className="barre-navigation__switch" title={libelles.translitteration}>
-          <i className="bi bi-type" aria-hidden="true" />
-          <span className="form-check form-switch m-0">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              role="switch"
-              checked={afficherTransliteration}
-              onChange={basculerTransliteration}
-              aria-label={libelles.translitteration}
-            />
-          </span>
-        </label>
+        {!compagnons && (
+          <label className="barre-navigation__switch" title={libelles.translitteration}>
+            <i className="bi bi-type" aria-hidden="true" />
+            <span className="form-check form-switch m-0">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                checked={afficherTransliteration}
+                onChange={basculerTransliteration}
+                aria-label={libelles.translitteration}
+              />
+            </span>
+          </label>
+        )}
         {dossierAudio && aAudio(recitateur, versetsActuels) && (
           <LecteurAudio dossier={dossierAudio} versets={versetsActuels} langue={langue} />
         )}
