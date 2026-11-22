@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { sourates, padId, titreSourate, getVersets } from "@/data/config";
+import { sourates, compagnons as listeCompagnons, compagnonsOrdonnes, nbHadiths, padId, titreSourate, getVersets } from "@/data/config";
 import { langueDePathname, urlPourLangue } from "@/conf/locale";
 import { LIBELLES } from "@/conf/libelles";
 import { aAudio } from "@/conf/audio";
@@ -33,16 +33,24 @@ export default function BarreNavigation() {
   const { recitateur } = useRecitateur();
 
   const disponibles = sourates.filter((s) => s.disponible);
-  const idActuel = Number(pathname.match(/^(?:\/(?:en|es))?\/sourate\/(\d+)\//)?.[1]);
+  const idActuel = Number(pathname.match(/^(?:\/(?:en|es|ar))?\/sourate\/(\d+)\//)?.[1]);
   const indexActuel = disponibles.findIndex((s) => s.id === idActuel);
   const sourateActuelle = indexActuel >= 0 ? disponibles[indexActuel] : null;
+  // Page d'un Compagnon : son nom dans la barre, sans numéro (pas de classement entre Compagnons).
+  const idCompagnon = Number(pathname.match(/^(?:\/(?:en|es|ar))?\/compagnons\/(\d+)\//)?.[1]);
+  const compagnonActuel = listeCompagnons.find((c) => c.id === idCompagnon) ?? null;
   const dossierAudio = sourateActuelle ? `${padId(sourateActuelle.id)}-${sourateActuelle.slug}` : null;
   const versetsActuels = sourateActuelle ? getVersets(sourateActuelle.id) : [];
-  const precedente = indexActuel > 0 ? disponibles[indexActuel - 1] : null;
-  const suivante = indexActuel >= 0 && indexActuel < disponibles.length - 1 ? disponibles[indexActuel + 1] : null;
+  // Précédent/suivant parmi les pages disponibles de la rubrique en cours (sourates, ou Compagnons dans l'ordre d'affichage).
+  const rubrique = compagnons ? compagnonsOrdonnes().filter((c) => c.disponible) : disponibles;
+  const indexRubrique = compagnons ? rubrique.findIndex((c) => c.id === idCompagnon) : indexActuel;
+  const precedente = indexRubrique > 0 ? rubrique[indexRubrique - 1] : null;
+  const suivante = indexRubrique >= 0 && indexRubrique < rubrique.length - 1 ? rubrique[indexRubrique + 1] : null;
+  const libellePrecedent = compagnons ? libelles.compagnonPrecedent : libelles.souratePrecedente;
+  const libelleSuivant = compagnons ? libelles.compagnonSuivant : libelles.sourateSuivante;
 
-  function urlSourate(sourate: { id: number; slug: string }): string {
-    return urlPourLangue(`/sourate/${padId(sourate.id)}/${sourate.slug}`, langue);
+  function urlPage(page: { id: number; slug: string }): string {
+    return urlPourLangue(`/${compagnons ? "compagnons" : "sourate"}/${padId(page.id)}/${page.slug}`, langue);
   }
 
   return (
@@ -75,6 +83,11 @@ export default function BarreNavigation() {
             <span className="text-muted me-2">{sourateActuelle.id}.</span>
             {titreSourate(sourateActuelle, langue)}
           </>
+        ) : compagnonActuel ? (
+          <>
+            {langue === "ar" ? compagnonActuel.nom.arabe : compagnonActuel.nom.transliteration}
+            <span className="text-muted ms-2">({nbHadiths(compagnonActuel)})</span>
+          </>
         ) : null}
       </div>
 
@@ -99,10 +112,10 @@ export default function BarreNavigation() {
         )}
         {precedente ? (
           <Link
-            href={urlSourate(precedente)}
+            href={urlPage(precedente)}
             className="barre-navigation__bouton"
-            title={libelles.souratePrecedente}
-            aria-label={libelles.souratePrecedente}
+            title={libellePrecedent}
+            aria-label={libellePrecedent}
           >
             ←
           </Link>
@@ -113,10 +126,10 @@ export default function BarreNavigation() {
         )}
         {suivante ? (
           <Link
-            href={urlSourate(suivante)}
+            href={urlPage(suivante)}
             className="barre-navigation__bouton"
-            title={libelles.sourateSuivante}
-            aria-label={libelles.sourateSuivante}
+            title={libelleSuivant}
+            aria-label={libelleSuivant}
           >
             →
           </Link>

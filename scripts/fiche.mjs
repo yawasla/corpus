@@ -53,7 +53,7 @@ function hadithDe(refHadith) {
 }
 
 // Traits gardés sur la page, dans l'ordre d'importance de la synthèse.
-const MAX_TRAITS = id <= 4 ? 30 : 20; // cible 25–30 (ids 1–4) ou 15–20 selon la matière disponible
+const MAX_TRAITS = id <= 4 ? 30 : 20; // maximum ; minimum 4 à 5 selon la matière disponible (CLAUDE.md)
 // Répartition homogène des recueils (CLAUDE.md) : quotas sur le nombre de traits, relâchés seulement s'il manque des traits.
 const QUOTAS = { "Sahih al-Bukhari": 0.3, "Al-Muwatta": 0.25, "Riyad as-Salihin": 0.25, "Bulugh al-Maram": 0.2 };
 const quota = (recueil) => Math.round((QUOTAS[recueil] ?? 0) * MAX_TRAITS);

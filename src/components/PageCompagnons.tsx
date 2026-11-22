@@ -1,6 +1,6 @@
 import type { Langue } from "@/conf/types";
 import { LIBELLES } from "@/conf/libelles";
-import { compagnons } from "@/data/config";
+import { compagnonsOrdonnes } from "@/data/config";
 import CadreOrnemental from "@/components/CadreOrnemental";
 import EnTete from "@/components/EnTete";
 import ListeCompagnons from "@/components/ListeCompagnons";
@@ -12,7 +12,7 @@ export default function PageCompagnons({ langue }: { langue: Langue }) {
       <h1 className="visually-hidden">{libelles.compagnons}</h1>
       <EnTete langue={langue} actif="compagnons" />
       <CadreOrnemental>
-        <ListeCompagnons compagnons={compagnons} langue={langue} />
+        <ListeCompagnons compagnons={compagnonsOrdonnes()} langue={langue} />
       </CadreOrnemental>
     </main>
   );

@@ -45,7 +45,7 @@ Ne pas anticiper ou développer de fonctionnalités hors du périmètre défini 
   - son analyse grammaticale (nature, personne, nombre, genre, etc.).
 
 ### Bibliothèque des Compagnons
-- Une page liste tous les Compagnons présents dans les recueils retenus (moins de 100), avec une page dédiée par Compagnon.
+- Une page liste tous les Compagnons présents dans les recueils retenus (une centaine, un peu plus si la matière le permet : au moins 3 faits pertinents sur le Compagnon), avec une page dédiée par Compagnon.
 - Chaque page décrit la personnalité du Compagnon : une courte synthèse, puis les hadiths cités, limités à quatre recueils : Sahih al-Bukhari, Al-Muwatta, Riyad as-Salihin et Bulugh al-Maram.
 - On n'analyse pas le contenu juridique d'un hadith, mais ce qu'il révèle des qualités du Compagnon.
 - Aucune hiérarchie entre Compagnons : pas de trait fondé sur un mérite comparé ou une préférence (« le meilleur », « meilleur que X », « nul ne l'égale »), y compris une préférence du Prophète pour un Compagnon (« si je devais prendre un khalil », « celui qui m'a le plus soutenu », « le plus aimé »), ce n'est pas le but du corpus.
@@ -56,9 +56,10 @@ Ne pas anticiper ou développer de fonctionnalités hors du périmètre défini 
 - Relecture : vérifier sur l'arabe le rapporteur, qui parle et les coupures ; « Allah », « shaytan », guillemets « … “…” … ». Le fait décrit le geste du Compagnon ; les qualités (par nous, plusieurs par fait) sont des qualités, pas des états, lues sur tout le hadith. Préférer la version à chaîne complète d'un *balagh*.
 - Pas de très longs hadiths (texte arabe ≤ 2 000 caractères, `MAX_CARACTERES` dans `scripts/fiche.mjs`) : sinon le trait est retiré (un doublon peut illustrer un autre fait).
 - Répartition des recueils sur une page, si possible : Bukhari ≤ 30 %, Al-Muwatta ≤ 25 %, Riyad as-Salihin ≤ 25 %, Bulugh al-Maram ≤ 20 % (`QUOTAS` dans `scripts/fiche.mjs`), jamais de décision juridique comme trait.
-- Petit projet : les pages restent courtes (15 à 20 traits), pas d'étude détaillée ; exception pour les quatre califes bien guidés (ids 1–4) : 25 à 30 traits.
+- Petit projet : les pages restent courtes, pas d'étude détaillée : au plus 20 traits (30 pour les quatre califes bien guidés, ids 1–4), au minimum 4 à 5 si possible, 3 si pertinents.
 - Texte arabe des hadiths repris des sources open source listées dans « Sources de données », traduction FR/EN/ES réalisée par nos soins et indiquée comme telle sur le site.
-- Liste des 100 Compagnons dans `src/data/config.ts` (id 1–100 = URL `/compagnons/<id>/<slug>`) : premier jet à vérifier contre les recueils, ordre à figer avant publication.
+- Liste des Compagnons dans `src/data/config.ts` (id = URL `/compagnons/<id>/<slug>`) : premier jet à vérifier contre les recueils, retirés listés dans `RETIRES` (`scripts/compagnons.mjs`, section en fin de `resume.md`), ids renumérotés une fois (1–96, califes 1–4) ; un Compagnon ajouté plus tard prend l'id suivant, un id n'est jamais réutilisé.
+- Ordre d'affichage (`compagnonsOrdonnes` dans `config.ts`) : les quatre califes (ids 1–4) en tête, puis par nombre de hadiths cités décroissant, à égalité par ordre alphabétique ; pas de numéro devant le nom, nombre de hadiths entre parenthèses dans la liste et dans le titre de la barre du bas ; flèches précédent/suivant dans cet ordre. L'id (URL) ne suit pas cet ordre et ne change plus une fois figé.
 
 ## Exigences non-fonctionnelles
 
@@ -93,7 +94,7 @@ Fichiers dans `sources/` (ignoré par git : `coran/`, `hadith/`), contenu affich
 | `npm run compagnons` | Repère les hadiths candidats de chaque Compagnon (A/R/B/X) → `analyse/compagnons/`. |
 | `npm run filtre -- <id>… \| tous` | Tri Mistral (yes/no/review, trait, épisode, citation vérifiée) → `analyse/mistral/NNN-slug.md`. Clé `MISTRAL_API_KEY` dans `.env.local`, modèle `mistral-medium-latest` (`MODELE=` pour changer). |
 | `npm run filtre -- synthese <id>…` | Regroupe les retenus en 50 traits majeurs max, sans hiérarchie entre Compagnons → `NNN-slug-synthese.md`. |
-| `npm run fiche -- <id>` | Préremplit `src/data/compagnons/compagnon_NNN.ts` depuis la synthèse : 25 à 30 traits (ids 1–4) ou 15 à 20, hadith ≤ 2 000 caractères, texte arabe verbatim, ﷺ ajouté ; garde résumé et traductions existants. |
+| `npm run fiche -- <id>` | Préremplit `src/data/compagnons/compagnon_NNN.ts` depuis la synthèse : 30 traits max (ids 1–4) ou 20, hadith ≤ 2 000 caractères, texte arabe verbatim, ﷺ ajouté ; garde résumé et traductions existants. |
 | `npm run traduction -- <id>` | Traduit avec Mistral les traits (en → fr/es/ar) et les hadiths (arabe → fr/en/es, chaîne réduite au Compagnon) d'une fiche ; ne remplit que les champs vides. |
 | `npm run filtre -- test <fichier>` | Compare la consigne à un échantillon validé à la main (calibrage). |
 
@@ -117,6 +118,7 @@ Tout ce qui n'est pas listé dans « Concept » ci-dessus à ne pas développer 
 - Ajout d'autres traductions.
 - Recherche plein texte.
 - API Corpus des pages des Compagnons.
+- Recueil Sahih Muslim, seulement si une page manque de matière : Riyad as-Salihin et Bulugh al-Maram en citent déjà une sélection (gain surtout sur le livre Fada'il as-Sahaba).
 - Rubrique Prophètes cités dans le Coran (25) : versets repérés par lemme `PN` du Quranic Arabic Corpus, même tri que pour les Compagnons sur ce qu'un passage révèle du Prophète.
 
 ---
@@ -131,8 +133,8 @@ Tout ce qui n'est pas listé dans « Concept » ci-dessus à ne pas développer 
 - [x] Darkmode
 - [x] Attribution Tanzil + Quranic Arabic Corpus visible sur le site (obligation de licence)
 - [x] Sélecteur de récitateur (options désactivées tant qu'une sourate n'est pas découpée pour ce récitateur)
+- [x] Sommaire de la page des Compagnons
 - [ ] Intégration du contenu Coran
-- [ ] Sommaire de la page des Compagnons
 - [ ] Intégration du contenu Compagnon
 
 <!-- BEGIN:nextjs-agent-rules -->

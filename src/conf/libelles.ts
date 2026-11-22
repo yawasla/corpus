@@ -8,6 +8,8 @@ type Libelles = {
   translitteration: string;
   souratePrecedente: string;
   sourateSuivante: string;
+  compagnonPrecedent: string;
+  compagnonSuivant: string;
   lecture: string;
   pause: string;
   arret: string;
@@ -32,6 +34,8 @@ export const LIBELLES: Record<Langue, Libelles> = {
     translitteration: "Translittération",
     souratePrecedente: "Sourate précédente",
     sourateSuivante: "Sourate suivante",
+    compagnonPrecedent: "Compagnon précédent",
+    compagnonSuivant: "Compagnon suivant",
     lecture: "Écouter la récitation",
     pause: "Mettre en pause",
     arret: "Arrêter",
@@ -54,6 +58,8 @@ export const LIBELLES: Record<Langue, Libelles> = {
     translitteration: "Transliteration",
     souratePrecedente: "Previous surah",
     sourateSuivante: "Next surah",
+    compagnonPrecedent: "Previous Companion",
+    compagnonSuivant: "Next Companion",
     lecture: "Listen to the recitation",
     pause: "Pause",
     arret: "Stop",
@@ -76,6 +82,8 @@ export const LIBELLES: Record<Langue, Libelles> = {
     translitteration: "Transliteración",
     souratePrecedente: "Sura anterior",
     sourateSuivante: "Sura siguiente",
+    compagnonPrecedent: "Compañero anterior",
+    compagnonSuivant: "Compañero siguiente",
     lecture: "Escuchar la recitación",
     pause: "Pausar",
     arret: "Detener",
@@ -98,6 +106,8 @@ export const LIBELLES: Record<Langue, Libelles> = {
     translitteration: "النقحرة",
     souratePrecedente: "السورة السابقة",
     sourateSuivante: "السورة التالية",
+    compagnonPrecedent: "الصحابي السابق",
+    compagnonSuivant: "الصحابي التالي",
     lecture: "الاستماع إلى التلاوة",
     pause: "إيقاف مؤقت",
     arret: "إيقاف",
