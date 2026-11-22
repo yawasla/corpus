@@ -5,6 +5,7 @@ import { readFileSync, writeFileSync, mkdirSync, rmSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { trouveBulugh } from "./openiti-bulugh.mjs";
+import { trouveRiyad } from "./openiti-riyad.mjs";
 
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SOURCES = join(RACINE, "sources/hadith");
@@ -187,21 +188,12 @@ function indexHadithApi(fichier) {
   };
 }
 
-// Riyad as-Salihin OpenITI : un hadith par bloc « ### ||| N/... », N = numéro du recueil.
-function indexOpenitiRiyad() {
-  const texte = readFileSync(join(SOURCES, "openiti-riyad-assalihin.mARkdown"), "utf8");
-  const numeros = new Set();
-  for (const m of texte.matchAll(/^### \|\|\| (\d+)\//gm)) numeros.add(Number(m[1]));
-  return numeros;
-}
-
 function sourceArabe(cle, h, index) {
   if (cle === "bukhari" || cle === "malik") {
     const n = index[cle].get(arabeNorm(h.arabic));
     return n ? `hadith-api n° ${n}` : "arabe introuvable";
   }
-  if (cle === "riyad_assalihin") return index.riyad.has(h.idInBook) ? `OpenITI n° ${h.idInBook}` : "arabe introuvable";
-  const n = trouveBulugh(h.arabic);
+  const n = cle === "riyad_assalihin" ? trouveRiyad(h.arabic) : trouveBulugh(h.arabic);
   return n ? `OpenITI n° ${n}` : "arabe introuvable";
 }
 
@@ -230,7 +222,7 @@ const compagnons = chargeCompagnons();
 const sansVariantes = compagnons.filter((c) => c.variantes.length === 0);
 if (sansVariantes.length) throw new Error(`Variantes manquantes : ${sansVariantes.map((c) => c.id).join(", ")}`);
 
-const index = { bukhari: indexHadithApi("ara-bukhari.json"), malik: indexHadithApi("ara-malik.json"), riyad: indexOpenitiRiyad() };
+const index = { bukhari: indexHadithApi("ara-bukhari.json"), malik: indexHadithApi("ara-malik.json") };
 const resultats = new Map(compagnons.map((c) => [c.id, { A: [], B: [], R: [], X: {} }]));
 const rapporteursInconnus = new Map();
 

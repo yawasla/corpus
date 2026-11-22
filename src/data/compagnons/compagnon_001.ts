@@ -24,6 +24,18 @@ export const fiche: FicheCompagnon = {
     {
       "ref": "Al-Muwatta 525",
       "raison": "même scène que Bukhari 1387 (chaîne complète), ici balagh"
+    },
+    {
+      "ref": "Sahih al-Bukhari 684",
+      "raison": "même thème que Bukhari 664 (diriger la prière), remplacé par Riyad as-Salihin pour la répartition des recueils"
+    },
+    {
+      "ref": "Sahih al-Bukhari 3713",
+      "raison": "proche de Bukhari 3542 (famille du Prophète ﷺ), remplacé par Riyad as-Salihin pour la répartition des recueils"
+    },
+    {
+      "ref": "Sahih al-Bukhari 3834",
+      "raison": "proche d’une décision juridique (vœu de silence), remplacé par Riyad as-Salihin pour la répartition des recueils"
     }
   ],
   "resume": {
@@ -41,7 +53,7 @@ export const fiche: FicheCompagnon = {
         "degre": "Sahih",
         "traduction": {
           "fr": "D'après Abu Bakr (qu'Allah soit satisfait de lui) : Je dis au Prophète ﷺ alors que nous étions dans la grotte : « Si l'un d'eux regardait sous ses pieds, il nous verrait. » Il répondit : « Que penses-tu, ô Abu Bakr, de deux personnes dont Allah est le troisième ? »",
-          "en": "Abu Bakr, may God be pleased with him, reported: I said to the Prophet ﷺ while we were in the cave: 'If one of them looked under his feet, he would see us.' He said: 'What do you think, O Abu Bakr, of two whose third is God?'",
+          "en": "Abu Bakr, may Allah be pleased with him, reported: I said to the Prophet ﷺ while we were in the cave: 'If one of them looked under his feet, he would see us.' He said: 'What do you think, O Abu Bakr, of two whose third is God?'",
           "es": "Según Abu Bakr (que Allah esté complacido con él): Le dije al Profeta ﷺ cuando estábamos en la cueva: «Si uno de ellos mirara bajo sus pies, nos vería». Él respondió: «¿Qué opinas, oh Abu Bakr, de dos personas cuyo tercero es Allah?»"
         }
       },
@@ -187,6 +199,71 @@ export const fiche: FicheCompagnon = {
     },
     {
       "hadith": {
+        "recueil": "Riyad as-Salihin",
+        "numero": 261,
+        "arabe": "وعن أبي هبيرة عائذ بن عمرو المزني وهو من أهل بيعة الرضوان رضي الله عنه، أن أبا سفيان أتى على سلمان وصهيب وبلال في نفر فقالوا: ما أخذت سيوف الله من عدو الله مأخذها، فقال أبو بكر رضي الله عنه: أتقولون هذا لشيخ قريش وسيدهم؟ فأتى النبي صلى الله عليه وسلم، فأخبره فقال: يا أبا بكر لعلك أغضبتهم؟ لئن كنت أغضبتهم لقد أغضبت ربك؟ فأتاهم فقال: يا إخوتاه آغضبتكم؟ قالوا: لا، يغفر الله لك يا أخي. رواه مسلم. قوله\"مأخذها\"أي: لم تستوف حقها منه. وقوله:\"يا أخي\"روي بفتح الهمزة وكسر الخاء وتخفيف الياء، وروي بضم الهمزة وفتح الخاء وتشديد الياء.",
+        "degre": "Sahih",
+        "traduction": {
+          "fr": "D’après Abu Hubayra ʿAʾidh ibn ʿAmr al-Muzani (qu’Allah l’agrée), qui fut de ceux qui prêtèrent le serment de Ridwan : Abu Sufyan passa près de Salman, Suhayb et Bilal, qui étaient avec d’autres. Ils dirent : « Les épées d’Allah n’ont pas pris l’ennemi d’Allah comme elles l’auraient dû. » Abu Bakr (qu’Allah l’agrée) dit : « Vous dites cela au doyen de Quraych et à leur chef ? » Puis il alla trouver le Prophète ﷺ et le lui raconta. Il dit : « Abu Bakr, peut-être les as-tu fâchés ? Si tu les as fâchés, tu as fâché ton Seigneur. » Abu Bakr retourna les voir et leur dit : « Mes frères, vous ai-je fâchés ? » Ils répondirent : « Non, qu’Allah te pardonne, mon frère. » Rapporté par Muslim.",
+          "en": "Abu Hubayra ʿAʾidh ibn ʿAmr al-Muzani (may Allah be pleased with him), who was among those who pledged allegiance at Ridwan, reported: Abu Sufyan passed by Salman, Suhayb and Bilal, who were with others. They said: “The swords of Allah have not taken the enemy of Allah as they should have.” Abu Bakr (may Allah be pleased with him) said: “Do you say this to the elder of Quraysh and their chief?” Then he went to the Prophet ﷺ and told him. He said: “Abu Bakr, perhaps you have angered them? If you have angered them, you have angered your Lord.” Abu Bakr went back to them and said: “My brothers, have I angered you?” They replied: “No, may Allah forgive you, our brother.” Reported by Muslim.",
+          "es": "Según Abu Hubayra ʿAʾidh ibn ʿAmr al-Muzani (que Allah esté complacido con él), que estuvo entre quienes juraron fidelidad en Ridwan: Abu Sufyan pasó junto a Salman, Suhayb y Bilal, que estaban con otros. Dijeron: «Las espadas de Allah no han tomado al enemigo de Allah como debieran». Abu Bakr (que Allah esté complacido con él) dijo: «¿Decís esto al anciano de Quraysh y a su jefe?». Luego fue a ver al Profeta ﷺ y se lo contó. Él dijo: «Abu Bakr, ¿quizá los has enojado? Si los has enojado, has enojado a tu Señor». Abu Bakr volvió a verlos y les dijo: «Hermanos míos, ¿os he enojado?». Respondieron: «No, que Allah te perdone, hermano nuestro». Lo relata Muslim."
+        }
+      },
+      "trait": {
+        "cle": "defended Abu Sufyan to the Prophet",
+        "en": "Worried that he might have wronged others",
+        "fr": "S’inquiétait d’avoir pu faire du tort à autrui",
+        "es": "Se preocupaba por haber podido perjudicar a otros",
+        "ar": "كان يخشى أن يكون قد أساء إلى غيره",
+        "qualites": [
+          {
+            "fr": "Respect de l’adversaire",
+            "en": "Respect for the adversary",
+            "es": "Respeto al adversario",
+            "ar": "احترام الخصم"
+          },
+          {
+            "fr": "Fidélité au Prophète ﷺ",
+            "en": "Faithfulness to the Prophet ﷺ",
+            "es": "Fidelidad al Profeta ﷺ",
+            "ar": "الوفاء للنبي ﷺ"
+          },
+          {
+            "fr": "Écoute du conseil",
+            "en": "Openness to counsel",
+            "es": "Escucha del consejo",
+            "ar": "قبول المشورة"
+          },
+          {
+            "fr": "Crainte d’Allah",
+            "en": "Fear of Allah",
+            "es": "Temor de Allah",
+            "ar": "خشية الله"
+          },
+          {
+            "fr": "Humilité",
+            "en": "Humility",
+            "es": "Humildad",
+            "ar": "التواضع"
+          },
+          {
+            "fr": "Examen de conscience",
+            "en": "Self-examination",
+            "es": "Examen de conciencia",
+            "ar": "محاسبة النفس"
+          },
+          {
+            "fr": "Fraternité",
+            "en": "Brotherhood",
+            "es": "Fraternidad",
+            "ar": "الأخوة"
+          }
+        ]
+      },
+      "valide": true
+    },
+    {
+      "hadith": {
         "recueil": "Sahih al-Bukhari",
         "numero": 2683,
         "arabe": "حَدَّثَنَا إِبْرَاهِيمُ بْنُ مُوسَى، أَخْبَرَنَا هِشَامٌ، عَنِ ابْنِ جُرَيْجٍ، قَالَ أَخْبَرَنِي عَمْرُو بْنُ دِينَارٍ، عَنْ مُحَمَّدِ بْنِ عَلِيٍّ، عَنْ جَابِرِ بْنِ عَبْدِ اللَّهِ، رضى الله عنهم قَالَ لَمَّا مَاتَ النَّبِيُّ صلى الله عليه وسلم جَاءَ أَبَا بَكْرٍ مَالٌ مِنْ قِبَلِ الْعَلاَءِ بْنِ الْحَضْرَمِيِّ، فَقَالَ أَبُو بَكْرٍ مَنْ كَانَ لَهُ عَلَى النَّبِيِّ صلى الله عليه وسلم دَيْنٌ، أَوْ كَانَتْ لَهُ قِبَلَهُ عِدَةٌ، فَلْيَأْتِنَا‏.‏ قَالَ جَابِرٌ فَقُلْتُ وَعَدَنِي رَسُولُ اللَّهِ صلى الله عليه وسلم أَنْ يُعْطِيَنِي هَكَذَا وَهَكَذَا وَهَكَذَا، فَبَسَطَ يَدَيْهِ ثَلاَثَ مَرَّاتٍ، قَالَ جَابِرٌ فَعَدَّ فِي يَدِي خَمْسَمِائَةٍ، ثُمَّ خَمْسَمِائَةٍ، ثُمَّ خَمْسَمِائَةٍ‏.‏",
@@ -268,59 +345,6 @@ export const fiche: FicheCompagnon = {
             "en": "Humility",
             "es": "Humildad",
             "ar": "التواضع"
-          }
-        ]
-      },
-      "valide": true
-    },
-    {
-      "hadith": {
-        "recueil": "Sahih al-Bukhari",
-        "numero": 684,
-        "arabe": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ يُوسُفَ، قَالَ أَخْبَرَنَا مَالِكٌ، عَنْ أَبِي حَازِمِ بْنِ دِينَارٍ، عَنْ سَهْلِ بْنِ سَعْدٍ السَّاعِدِيِّ، أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم ذَهَبَ إِلَى بَنِي عَمْرِو بْنِ عَوْفٍ لِيُصْلِحَ بَيْنَهُمْ فَحَانَتِ الصَّلاَةُ فَجَاءَ الْمُؤَذِّنُ إِلَى أَبِي بَكْرٍ فَقَالَ أَتُصَلِّي لِلنَّاسِ فَأُقِيمَ قَالَ نَعَمْ‏.‏ فَصَلَّى أَبُو بَكْرٍ، فَجَاءَ رَسُولُ اللَّهِ صلى الله عليه وسلم وَالنَّاسُ فِي الصَّلاَةِ، فَتَخَلَّصَ حَتَّى وَقَفَ فِي الصَّفِّ، فَصَفَّقَ النَّاسُ ـ وَكَانَ أَبُو بَكْرٍ لاَ يَلْتَفِتُ فِي صَلاَتِهِ ـ فَلَمَّا أَكْثَرَ النَّاسُ التَّصْفِيقَ الْتَفَتَ فَرَأَى رَسُولَ اللَّهِ صلى الله عليه وسلم، فَأَشَارَ إِلَيْهِ رَسُولُ اللَّهِ صلى الله عليه وسلم أَنِ امْكُثْ مَكَانَكَ، فَرَفَعَ أَبُو بَكْرٍ ـ رضى الله عنه ـ يَدَيْهِ، فَحَمِدَ اللَّهَ عَلَى مَا أَمَرَهُ بِهِ رَسُولُ اللَّهِ صلى الله عليه وسلم مِنْ ذَلِكَ، ثُمَّ اسْتَأْخَرَ أَبُو بَكْرٍ حَتَّى اسْتَوَى فِي الصَّفِّ، وَتَقَدَّمَ رَسُولُ اللَّهِ صلى الله عليه وسلم فَصَلَّى، فَلَمَّا انْصَرَفَ قَالَ ‏\"‏ يَا أَبَا بَكْرٍ مَا مَنَعَكَ أَنْ تَثْبُتَ إِذْ أَمَرْتُكَ ‏\"‏‏.‏ فَقَالَ أَبُو بَكْرٍ مَا كَانَ لاِبْنِ أَبِي قُحَافَةَ أَنْ يُصَلِّيَ بَيْنَ يَدَىْ رَسُولِ اللَّهِ صلى الله عليه وسلم‏.‏ فَقَالَ رَسُولُ اللَّهِ صلى الله عليه وسلم ‏\"‏ مَا لِي رَأَيْتُكُمْ أَكْثَرْتُمُ التَّصْفِيقَ مَنْ رَابَهُ شَىْءٌ فِي صَلاَتِهِ فَلْيُسَبِّحْ، فَإِنَّهُ إِذَا سَبَّحَ الْتُفِتَ إِلَيْهِ، وَإِنَّمَا التَّصْفِيقُ لِلنِّسَاءِ ‏\"‏‏.‏",
-        "degre": "Sahih",
-        "traduction": {
-          "fr": "D’après Sahl ibn Sa‘d as-Sa‘idi (qu’Allah l’agrée) : Le Prophète ﷺ se rendit chez les Banu ‘Amr ibn ‘Awf pour les réconcilier. L’heure de la prière arriva ; le muezzin vint trouver Abu Bakr et lui dit : « Veux-tu diriger la prière des gens ? Je vais faire l’iqama. » Il répondit : « Oui. » Abu Bakr commença la prière. Le Prophète ﷺ arriva alors que les gens priaient ; il se fraya un chemin jusqu’au premier rang. Les gens se mirent à frapper des mains, mais Abu Bakr ne se retournait jamais pendant sa prière. Quand les gens frappèrent des mains avec insistance, il se retourna et vit le Prophète ﷺ, qui lui fit signe de rester à sa place. Abu Bakr leva alors les mains et loua Allah pour ce que le Prophète ﷺ lui avait demandé, puis il recula jusqu’à rejoindre le rang, et le Prophète ﷺ s’avança et dirigea la prière. Quand il eut terminé, il dit : « Ô Abu Bakr, qu’est-ce qui t’a empêché de rester à ta place quand je te l’ai demandé ? » Abu Bakr répondit : « Il n’appartient pas au fils d’Abu Quhafa de diriger la prière devant le Messager d’Allah ﷺ. » Le Messager d’Allah ﷺ dit alors : « Pourquoi vous ai-je vus frapper des mains autant ? Que celui à qui quelque chose arrive pendant sa prière dise “Subhan Allah” : s’il le dit, on se tournera vers lui. Frapper des mains est pour les femmes. »",
-          "en": "Sahl ibn Sa‘d as-Sa‘idi (may Allah be pleased with him) reported: The Prophet ﷺ went to the Banu ‘Amr ibn ‘Awf to reconcile them. The time for prayer came, and the muezzin came to Abu Bakr and said: “Will you lead the people in prayer? I will call the iqama.” He said: “Yes.” So Abu Bakr began the prayer. The Prophet ﷺ arrived while the people were praying and made his way through to the front row. The people began to clap, but Abu Bakr never turned around in his prayer. When the people clapped insistently, he turned and saw the Prophet ﷺ, who signalled to him to stay in his place. Abu Bakr raised his hands and praised Allah for what the Prophet ﷺ had asked of him, then stepped back until he joined the row, and the Prophet ﷺ came forward and led the prayer. When he had finished, he said: “O Abu Bakr, what kept you from staying in your place when I asked you to?” Abu Bakr said: “It is not for the son of Abu Quhafa to lead the prayer in front of the Messenger of Allah ﷺ.” The Messenger of Allah ﷺ then said: “Why did I see you clapping so much? Whoever has something happen to him in his prayer should say ‘Subhan Allah’; when he says it, attention will be paid to him. Clapping is for women.”",
-          "es": "Según Sahl ibn Sa‘d as-Sa‘idi (que Allah esté complacido con él): El Profeta ﷺ fue a los Banu ‘Amr ibn ‘Awf para reconciliarlos. Llegó la hora de la oración; el muecín se acercó a Abu Bakr y le dijo: «¿Diriges la oración de la gente? Yo haré la iqama». Respondió: «Sí». Abu Bakr comenzó la oración. El Profeta ﷺ llegó mientras la gente rezaba y se abrió paso hasta la primera fila. La gente empezó a dar palmadas, pero Abu Bakr nunca se volvía durante su oración. Cuando la gente insistió con las palmadas, se volvió y vio al Profeta ﷺ, que le hizo una señal para que se quedara en su lugar. Abu Bakr levantó las manos y alabó a Allah por lo que el Profeta ﷺ le había pedido; luego retrocedió hasta unirse a la fila, y el Profeta ﷺ se adelantó y dirigió la oración. Al terminar, dijo: «Oh Abu Bakr, ¿qué te impidió quedarte en tu lugar cuando te lo pedí?». Abu Bakr respondió: «No le corresponde al hijo de Abu Quhafa dirigir la oración delante del Mensajero de Allah ﷺ». El Mensajero de Allah ﷺ dijo entonces: «¿Por qué os vi dar tantas palmadas? A quien le ocurra algo durante su oración, que diga “Subhan Allah”: cuando lo diga, se le prestará atención. Las palmadas son para las mujeres»."
-        }
-      },
-      "trait": {
-        "cle": "refused to lead prayer before the Prophet ﷺ",
-        "en": "Refused to lead the prayer in front of the Prophet ﷺ",
-        "fr": "A refusé de diriger la prière devant le Prophète ﷺ",
-        "es": "Se negó a dirigir la oración delante del Profeta ﷺ",
-        "ar": "أبى أن يؤمّ الناس بين يدي النبي ﷺ",
-        "qualites": [
-          {
-            "fr": "Connaissance du Coran",
-            "en": "Knowledge of the Quran",
-            "es": "Conocimiento del Corán",
-            "ar": "العلم بالقرآن"
-          },
-          {
-            "fr": "Assiduité à la prière",
-            "en": "Steadfastness in prayer",
-            "es": "Constancia en la oración",
-            "ar": "المواظبة على الصلاة"
-          },
-          {
-            "fr": "Respect du Prophète ﷺ",
-            "en": "Respect for the Prophet ﷺ",
-            "es": "Respeto al Profeta ﷺ",
-            "ar": "توقير النبي ﷺ"
-          },
-          {
-            "fr": "Humilité",
-            "en": "Humility",
-            "es": "Humildad",
-            "ar": "التواضع"
-          },
-          {
-            "fr": "Reconnaissance",
-            "en": "Gratitude",
-            "es": "Gratitud",
-            "ar": "الشكر"
           }
         ]
       },
@@ -721,6 +745,59 @@ export const fiche: FicheCompagnon = {
     },
     {
       "hadith": {
+        "recueil": "Riyad as-Salihin",
+        "numero": 151,
+        "arabe": "وعن أبي ربعي حنظلة بن الربيع الأسيدي الكاتب أحد كتاب رسول الله صلى الله عليه وسلم قال: لقيني أبو بكر رضي الله عنه فقال: كيف أنت يا حنظلة؟ قلت: نافق حنظلة، قال: سبحان الله ما تقول؟،: قلت: نكون عند رسول الله صلى الله عليه وسلم يذكرنا بالجنة والنار كأنا رأي عين، فإذا خرجنا من عند رسول الله صلى الله عليه وسلم عافسنا الأزواج والأولاد والضيعات نسينا كثيرا قال أبو بكر رضي الله عنه: فوالله إنا لنلقى مثل هذا فانطلقت أنا وأبو بكر حتى دخلنا على رسول الله صلى الله عليه وسلم. فقلت نافق حنظلة يا رسول الله، فقال رسول الله صلى الله عليه وسلم: \"وما ذاك؟ \" قلت: يا رسول الله نكون عندك تذكرنا بالنار والجنة كأنا رأي العين فإذا خرجنا من عندك عافسنا الأزواج والأولاد والضيعات نسينا كثيرا. فقال رسول الله صلى الله عليه وسلم:\"والذي نفسي بيده أن لو تدومون على ما تكونون عندي وفي الذكر لصافحتكم الملائكة على فرشكم وفي طرقكم، ولكن يا حنظلة ساعة وساعة\" ثلاث مرات، رواه مسلم. قوله:\"ربعي\"بكسر الراء.\"الأسيدي\"بضم الهمزة وفتح السين وبعدها ياء مكسورة مشددة, وقوله:\"عافسنا\"هو بالعين والسين المهملتين, أي: عالجنا ولاعبنا.\"الضيعات\": المعايش.",
+        "degre": "Sahih",
+        "traduction": {
+          "fr": "D’après Hanzala ibn ar-Rabiʿ al-Usayyidi, l’un des scribes du Messager d’Allah ﷺ : Abu Bakr (qu’Allah l’agrée) me rencontra et me demanda : « Comment vas-tu, Hanzala ? » Je répondis : « Hanzala est devenu hypocrite ! » Il dit : « Gloire à Allah ! Que dis-tu là ? » Je répondis : « Quand nous sommes auprès du Messager d’Allah ﷺ, il nous rappelle le Paradis et l’Enfer, comme si nous les voyions de nos yeux. Puis, quand nous le quittons, nous nous occupons de nos épouses, de nos enfants et de nos moyens de subsistance, nous nous divertissons, et nous oublions beaucoup. » Abu Bakr dit : « Par Allah, nous éprouvons la même chose. » Abu Bakr et moi partîmes alors jusque chez le Messager d’Allah ﷺ. Je dis : « Hanzala est devenu hypocrite, ô Messager d’Allah ! » Il demanda : « Comment cela ? » Je répondis : « Ô Messager d’Allah, quand nous sommes auprès de toi, tu nous rappelles l’Enfer et le Paradis, comme si nous les voyions de nos yeux. Puis, quand nous te quittons, nous nous occupons de nos épouses, de nos enfants et de nos moyens de subsistance, nous nous divertissons, et nous oublions beaucoup. » Le Messager d’Allah ﷺ dit : « Par Celui qui tient mon âme en Sa main, si vous demeuriez toujours dans l’état où vous êtes auprès de moi et dans le rappel, les anges vous serreraient la main dans vos lits et en chemin. Mais, Hanzala, il y a un moment pour ceci et un moment pour cela. » Il le dit trois fois. Rapporté par Muslim.",
+          "en": "Hanzala ibn ar-Rabiʿ al-Usayyidi, one of the scribes of the Messenger of Allah ﷺ, reported: Abu Bakr (may Allah be pleased with him) met me and asked: “How are you, Hanzala?” I said: “Hanzala has become a hypocrite!” He said: “Glory be to Allah! What are you saying?” I said: “When we are with the Messenger of Allah ﷺ, he reminds us of Paradise and Hell as though we saw them with our own eyes. Then, when we leave him, we busy ourselves with our wives, our children and our livelihood, we amuse ourselves, and we forget much.” Abu Bakr said: “By Allah, we experience the same.” So Abu Bakr and I went to the Messenger of Allah ﷺ. I said: “Hanzala has become a hypocrite, O Messenger of Allah!” He asked: “How so?” I said: “O Messenger of Allah, when we are with you, you remind us of Hell and Paradise as though we saw them with our own eyes. Then, when we leave you, we busy ourselves with our wives, our children and our livelihood, we amuse ourselves, and we forget much.” The Messenger of Allah ﷺ said: “By the One in Whose hand is my soul, if you remained always as you are with me and in remembrance, the angels would shake your hands in your beds and on your way. But, Hanzala, there is a moment for this and a moment for that.” He said it three times. Reported by Muslim.",
+          "es": "Según Hanzala ibn ar-Rabiʿ al-Usayyidi, uno de los escribas del Mensajero de Allah ﷺ: Abu Bakr (que Allah esté complacido con él) me encontró y me preguntó: «¿Cómo estás, Hanzala?». Respondí: «¡Hanzala se ha vuelto hipócrita!». Dijo: «¡Gloria a Allah! ¿Qué dices?». Respondí: «Cuando estamos con el Mensajero de Allah ﷺ, nos recuerda el Paraíso y el Infierno como si los viéramos con nuestros ojos. Luego, cuando lo dejamos, nos ocupamos de nuestras esposas, de nuestros hijos y de nuestro sustento, nos distraemos, y olvidamos mucho». Abu Bakr dijo: «Por Allah, nosotros experimentamos lo mismo». Entonces Abu Bakr y yo fuimos a ver al Mensajero de Allah ﷺ. Dije: «¡Hanzala se ha vuelto hipócrita, oh Mensajero de Allah!». Preguntó: «¿Cómo es eso?». Respondí: «Oh Mensajero de Allah, cuando estamos contigo, nos recuerdas el Infierno y el Paraíso como si los viéramos con nuestros ojos. Luego, cuando te dejamos, nos ocupamos de nuestras esposas, de nuestros hijos y de nuestro sustento, nos distraemos, y olvidamos mucho». El Mensajero de Allah ﷺ dijo: «Por Aquel en cuya mano está mi alma, si permanecierais siempre como estáis conmigo y en el recuerdo, los ángeles os estrecharían la mano en vuestros lechos y de camino. Pero, Hanzala, hay un momento para esto y un momento para aquello». Lo dijo tres veces. Lo relata Muslim."
+        }
+      },
+      "trait": {
+        "cle": "shared Hanzalah's spiritual struggle",
+        "en": "Went to seek the Prophet’s ﷺ counsel",
+        "fr": "Est allé demander conseil au Prophète ﷺ",
+        "es": "Fue a pedir consejo al Profeta ﷺ",
+        "ar": "ذهب يستشير النبي ﷺ",
+        "qualites": [
+          {
+            "fr": "Recherche du savoir",
+            "en": "Seeking knowledge",
+            "es": "Búsqueda del conocimiento",
+            "ar": "طلب العلم"
+          },
+          {
+            "fr": "Examen de conscience",
+            "en": "Self-examination",
+            "es": "Examen de conciencia",
+            "ar": "محاسبة النفس"
+          },
+          {
+            "fr": "Sincérité",
+            "en": "Sincerity",
+            "es": "Sinceridad",
+            "ar": "الصدق"
+          },
+          {
+            "fr": "Humilité",
+            "en": "Humility",
+            "es": "Humildad",
+            "ar": "التواضع"
+          },
+          {
+            "fr": "Écoute du conseil",
+            "en": "Openness to counsel",
+            "es": "Escucha del consejo",
+            "ar": "قبول المشورة"
+          }
+        ]
+      },
+      "valide": true
+    },
+    {
+      "hadith": {
         "recueil": "Sahih al-Bukhari",
         "numero": 3182,
         "arabe": "حَدَّثَنَا عَبْدُ اللَّهِ بْنُ مُحَمَّدٍ، حَدَّثَنَا يَحْيَى بْنُ آدَمَ، حَدَّثَنَا يَزِيدُ بْنُ عَبْدِ الْعَزِيزِ، عَنْ أَبِيهِ، حَدَّثَنَا حَبِيبُ بْنُ أَبِي ثَابِتٍ، قَالَ حَدَّثَنِي أَبُو وَائِلٍ، قَالَ كُنَّا بِصِفِّينَ فَقَامَ سَهْلُ بْنُ حُنَيْفٍ فَقَالَ أَيُّهَا النَّاسُ اتَّهِمُوا أَنْفُسَكُمْ فَإِنَّا كُنَّا مَعَ رَسُولِ اللَّهِ صلى الله عليه وسلم يَوْمَ الْحُدَيْبِيَةِ، وَلَوْ نَرَى قِتَالاً لَقَاتَلْنَا، فَجَاءَ عُمَرُ بْنُ الْخَطَّابِ فَقَالَ يَا رَسُولَ اللَّهِ، أَلَسْنَا عَلَى الْحَقِّ وَهُمْ عَلَى الْبَاطِلِ فَقَالَ ‏\"‏ بَلَى ‏\"‏‏.‏ فَقَالَ أَلَيْسَ قَتْلاَنَا فِي الْجَنَّةِ وَقَتْلاَهُمْ فِي النَّارِ قَالَ ‏\"‏ بَلَى ‏\"‏‏.‏ قَالَ فَعَلَى مَا نُعْطِي الدَّنِيَّةَ فِي دِينِنَا أَنَرْجِعُ وَلَمَّا يَحْكُمِ اللَّهُ بَيْنَنَا وَبَيْنَهُمْ فَقَالَ ‏\"‏ ابْنَ الْخَطَّابِ، إِنِّي رَسُولُ اللَّهِ، وَلَنْ يُضَيِّعَنِي اللَّهُ أَبَدًا ‏\"‏‏.‏ فَانْطَلَقَ عُمَرُ إِلَى أَبِي بَكْرٍ فَقَالَ لَهُ مِثْلَ مَا قَالَ لِلنَّبِيِّ صلى الله عليه وسلم فَقَالَ إِنَّهُ رَسُولُ اللَّهِ، وَلَنْ يُضَيِّعَهُ اللَّهُ أَبَدًا‏.‏ فَنَزَلَتْ سُورَةُ الْفَتْحِ، فَقَرَأَهَا رَسُولُ اللَّهِ صلى الله عليه وسلم عَلَى عُمَرَ إِلَى آخِرِهَا‏.‏ فَقَالَ عُمَرُ يَا رَسُولَ اللَّهِ، أَوَفَتْحٌ هُوَ قَالَ ‏\"‏ نَعَمْ ‏\"‏‏.‏",
@@ -826,6 +903,53 @@ export const fiche: FicheCompagnon = {
             "en": "Fear of Allah",
             "es": "Temor de Allah",
             "ar": "خشية الله"
+          }
+        ]
+      },
+      "valide": true
+    },
+    {
+      "hadith": {
+        "recueil": "Riyad as-Salihin",
+        "numero": 1454,
+        "arabe": "عنه أن أبا بكر الصديق، رضي الله عنه، قال: يا رسول الله مرني بكلمات أقولهن إذا أصبحت وإذا أمسيت، قال: قل: \"اللهم فاطر السموات والأرض عالم الغيب والشهادة، رب كل شيء ومليكه. أشهد أن لا إله إلا أنت، أعوذ بك من شر نفسي وشر الشيطان وشركه\" قال: \"قلها إذا أصبحت، وإذا أمسيت، وإذا أخذت مضجعك \"رواه أبو داود والترمذي وقال: حديث حسن صحيح.",
+        "degre": "Hasan Sahih",
+        "traduction": {
+          "fr": "Il est rapporté qu’Abu Bakr as-Siddiq (qu’Allah l’agrée) dit : « Ô Messager d’Allah, enseigne-moi des paroles à dire le matin et le soir. » Il répondit : « Dis : “Ô Allah, Créateur des cieux et de la terre, Connaisseur de l’invisible et du visible, Seigneur et Souverain de toute chose, je témoigne qu’il n’y a de divinité que Toi. Je cherche refuge auprès de Toi contre le mal de mon âme, contre le mal du shaytan et ce à quoi il appelle d’associer à Allah.” » Puis il dit : « Dis-la le matin, le soir et quand tu te couches. » Rapporté par Abu Dawud et at-Tirmidhi.",
+          "en": "It is reported that Abu Bakr as-Siddiq (may Allah be pleased with him) said: “O Messenger of Allah, teach me words to say in the morning and in the evening.” He replied: “Say: ‘O Allah, Creator of the heavens and the earth, Knower of the unseen and the seen, Lord and Sovereign of all things, I bear witness that there is no deity but You. I seek refuge in You from the evil of my soul, from the evil of the shaytan and from his call to associate partners with Allah.’” Then he said: “Say it in the morning, in the evening and when you go to bed.” Reported by Abu Dawud and at-Tirmidhi.",
+          "es": "Se relata que Abu Bakr as-Siddiq (que Allah esté complacido con él) dijo: «Oh Mensajero de Allah, enséñame palabras que decir por la mañana y por la tarde». Respondió: «Di: “Oh Allah, Creador de los cielos y de la tierra, Conocedor de lo oculto y de lo visible, Señor y Soberano de todas las cosas, atestiguo que no hay divinidad sino Tú. Me refugio en Ti del mal de mi alma, del mal del shaytan y de su llamada a asociar a otros con Allah”». Luego dijo: «Dila por la mañana, por la tarde y cuando te acuestes». Lo relatan Abu Dawud y at-Tirmidhi."
+        }
+      },
+      "trait": {
+        "cle": "sought spiritual guidance from the Prophet",
+        "en": "Asked the Prophet ﷺ for words to say morning and evening",
+        "fr": "A demandé au Prophète ﷺ des paroles à dire matin et soir",
+        "es": "Pidió al Profeta ﷺ palabras para decir por la mañana y por la tarde",
+        "ar": "سأل النبي ﷺ كلمات يقولهن إذا أصبح وإذا أمسى",
+        "qualites": [
+          {
+            "fr": "Recherche du savoir",
+            "en": "Seeking knowledge",
+            "es": "Búsqueda del conocimiento",
+            "ar": "طلب العلم"
+          },
+          {
+            "fr": "Assiduité dans l’adoration",
+            "en": "Steadfastness in worship",
+            "es": "Constancia en la adoración",
+            "ar": "المواظبة على العبادة"
+          },
+          {
+            "fr": "Attachement au rappel d’Allah",
+            "en": "Devotion to the remembrance of Allah",
+            "es": "Apego al recuerdo de Allah",
+            "ar": "المداومة على ذكر الله"
+          },
+          {
+            "fr": "Humilité",
+            "en": "Humility",
+            "es": "Humildad",
+            "ar": "التواضع"
           }
         ]
       },
@@ -1179,88 +1303,6 @@ export const fiche: FicheCompagnon = {
             "en": "Compassion",
             "es": "Compasión",
             "ar": "الرحمة"
-          }
-        ]
-      },
-      "valide": true
-    },
-    {
-      "hadith": {
-        "recueil": "Sahih al-Bukhari",
-        "numero": 3713,
-        "arabe": "أَخْبَرَنِي عَبْدُ اللَّهِ بْنُ عَبْدِ الْوَهَّابِ، حَدَّثَنَا خَالِدٌ، حَدَّثَنَا شُعْبَةُ، عَنْ وَاقِدٍ، قَالَ سَمِعْتُ أَبِي يُحَدِّثُ، عَنِ ابْنِ عُمَرَ، عَنْ أَبِي بَكْرٍ ـ رضى الله عنهم ـ قَالَ ارْقُبُوا مُحَمَّدًا صلى الله عليه وسلم فِي أَهْلِ بَيْتِهِ‏.‏",
-        "degre": "Sahih",
-        "traduction": {
-          "fr": "D’après Ibn ‘Umar, Abu Bakr (qu’Allah les agrée) dit : « Respectez Muhammad ﷺ à travers les gens de sa maison. »",
-          "en": "Ibn ‘Umar reported that Abu Bakr (may Allah be pleased with them) said: “Honour Muhammad ﷺ through the people of his household.”",
-          "es": "Según Ibn ‘Umar, Abu Bakr (que Allah esté complacido con ellos) dijo: «Respetad a Muhammad ﷺ a través de la gente de su casa»."
-        }
-      },
-      "trait": {
-        "cle": "honored the Prophet ﷺ's family",
-        "en": "Called on people to honour the Prophet’s ﷺ family",
-        "fr": "A appelé à honorer la famille du Prophète ﷺ",
-        "es": "Llamó a honrar a la familia del Profeta ﷺ",
-        "ar": "دعا إلى إكرام آل بيت النبي ﷺ",
-        "qualites": [
-          {
-            "fr": "Amour du Prophète ﷺ",
-            "en": "Love for the Prophet ﷺ",
-            "es": "Amor al Profeta ﷺ",
-            "ar": "محبة النبي ﷺ"
-          },
-          {
-            "fr": "Respect de la famille du Prophète ﷺ",
-            "en": "Respect for the Prophet’s ﷺ family",
-            "es": "Respeto a la familia del Profeta ﷺ",
-            "ar": "توقير آل بيت النبي ﷺ"
-          }
-        ]
-      },
-      "valide": true
-    },
-    {
-      "hadith": {
-        "recueil": "Sahih al-Bukhari",
-        "numero": 3834,
-        "arabe": "حَدَّثَنَا أَبُو النُّعْمَانِ، حَدَّثَنَا أَبُو عَوَانَةَ، عَنْ بَيَانٍ أَبِي بِشْرٍ، عَنْ قَيْسِ بْنِ أَبِي حَازِمٍ، قَالَ دَخَلَ أَبُو بَكْرٍ عَلَى امْرَأَةٍ مِنْ أَحْمَسَ يُقَالُ لَهَا زَيْنَبُ، فَرَآهَا لاَ تَكَلَّمُ، فَقَالَ مَا لَهَا لاَ تَكَلَّمُ قَالُوا حَجَّتْ مُصْمِتَةً‏.‏ قَالَ لَهَا تَكَلَّمِي، فَإِنَّ هَذَا لاَ يَحِلُّ، هَذَا مِنْ عَمَلِ الْجَاهِلِيَّةِ‏.‏ فَتَكَلَّمَتْ، فَقَالَتْ مَنْ أَنْتَ قَالَ امْرُؤٌ مِنَ الْمُهَاجِرِينَ‏.‏ قَالَتْ أَىُّ الْمُهَاجِرِينَ قَالَ مِنْ قُرَيْشٍ‏.‏ قَالَتْ مِنْ أَىِّ قُرَيْشٍ أَنْتَ قَالَ إِنَّكِ لَسَئُولٌ أَنَا أَبُو بَكْرٍ‏.‏ قَالَتْ مَا بَقَاؤُنَا عَلَى هَذَا الأَمْرِ الصَّالِحِ الَّذِي جَاءَ اللَّهُ بِهِ بَعْدَ الْجَاهِلِيَّةِ قَالَ بَقَاؤُكُمْ عَلَيْهِ مَا اسْتَقَامَتْ بِكُمْ أَئِمَّتُكُمْ‏.‏ قَالَتْ وَمَا الأَئِمَّةُ قَالَ أَمَا كَانَ لِقَوْمِكِ رُءُوسٌ وَأَشْرَافٌ يَأْمُرُونَهُمْ فَيُطِيعُونَهُمْ قَالَتْ بَلَى‏.‏ قَالَ فَهُمْ أُولَئِكَ عَلَى النَّاسِ‏.‏",
-        "degre": "Sahih",
-        "traduction": {
-          "fr": "D’après Qays ibn Abi Hazim : Abu Bakr entra chez une femme d’Ahmas appelée Zaynab, et vit qu’elle ne parlait pas. Il demanda : « Qu’a-t-elle à ne pas parler ? » On lui dit : « Elle a fait le pèlerinage en gardant le silence. » Il lui dit : « Parle, car cela n’est pas permis : c’est une pratique de la Jahiliyya. » Elle parla et dit : « Qui es-tu ? » Il dit : « Un homme des Muhajirun. » Elle dit : « Lesquels des Muhajirun ? » Il dit : « De Quraych. » Elle dit : « De quelle branche de Quraych ? » Il dit : « Tu poses bien des questions ! Je suis Abu Bakr. » Elle dit : « Combien de temps resterons-nous sur cette voie de bien qu’Allah a apportée après la Jahiliyya ? » Il dit : « Vous y resterez tant que vos dirigeants resteront droits. » Elle dit : « Et qui sont les dirigeants ? » Il dit : « Ton peuple n’avait-il pas des chefs et des notables qui donnaient des ordres et auxquels on obéissait ? » Elle dit : « Si. » Il dit : « Ce sont eux, pour les gens. »",
-          "en": "Qays ibn Abi Hazim reported: Abu Bakr went in to a woman of Ahmas called Zaynab and saw that she was not speaking. He said: “Why is she not speaking?” They said: “She has made the pilgrimage keeping silent.” He said to her: “Speak, for this is not permitted; it is a practice of the Jahiliyya.” She spoke and said: “Who are you?” He said: “A man of the Muhajirun.” She said: “Which of the Muhajirun?” He said: “Of Quraysh.” She said: “Which part of Quraysh?” He said: “You ask a lot of questions! I am Abu Bakr.” She said: “How long will we remain on this good way that Allah has brought after the Jahiliyya?” He said: “You will remain on it as long as your leaders remain upright.” She said: “And who are the leaders?” He said: “Did your people not have chiefs and nobles who gave orders and were obeyed?” She said: “Yes.” He said: “They are those, over the people.”",
-          "es": "Según Qays ibn Abi Hazim: Abu Bakr entró a ver a una mujer de Ahmas llamada Zaynab y vio que no hablaba. Dijo: «¿Por qué no habla?». Le dijeron: «Ha hecho la peregrinación guardando silencio». Le dijo: «Habla, porque esto no está permitido: es una práctica de la Yahiliyya». Ella habló y dijo: «¿Quién eres?». Dijo: «Un hombre de los Muhayirun». Ella dijo: «¿De cuáles de los Muhayirun?». Dijo: «De Quraysh». Ella dijo: «¿De qué rama de Quraysh?». Dijo: «¡Haces muchas preguntas! Soy Abu Bakr». Ella dijo: «¿Cuánto tiempo permaneceremos en este buen camino que Allah trajo después de la Yahiliyya?». Dijo: «Permaneceréis en él mientras vuestros dirigentes se mantengan rectos». Ella dijo: «¿Y quiénes son los dirigentes?». Dijo: «¿No tenía tu pueblo jefes y notables que daban órdenes y eran obedecidos?». Ella dijo: «Sí». Dijo: «Esos son, para la gente»."
-        }
-      },
-      "trait": {
-        "cle": "rejected pre-Islamic ignorance practices",
-        "en": "Gently corrected a practice of the Jahiliyya",
-        "fr": "A corrigé avec douceur une pratique de la Jahiliyya",
-        "es": "Corrigió con dulzura una práctica de la Yahiliyya",
-        "ar": "صحّح برفق عادة من عادات الجاهلية",
-        "qualites": [
-          {
-            "fr": "Attachement à l’islam",
-            "en": "Attachment to Islam",
-            "es": "Apego al islam",
-            "ar": "التمسك بالإسلام"
-          },
-          {
-            "fr": "Humilité",
-            "en": "Humility",
-            "es": "Humildad",
-            "ar": "التواضع"
-          },
-          {
-            "fr": "Pédagogie",
-            "en": "Teaching skill",
-            "es": "Pedagogía",
-            "ar": "حسن التعليم"
-          },
-          {
-            "fr": "Sagesse",
-            "en": "Wisdom",
-            "es": "Sabiduría",
-            "ar": "الحكمة"
           }
         ]
       },

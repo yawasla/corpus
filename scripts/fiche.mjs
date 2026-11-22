@@ -4,6 +4,7 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { trouveBulugh, texteBulugh } from "./openiti-bulugh.mjs";
+import { trouveRiyad, texteRiyad } from "./openiti-riyad.mjs";
 
 const RACINE = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SOURCES = join(RACINE, "sources/hadith");
@@ -16,17 +17,10 @@ const traits = JSON.parse(readFileSync(join(RACINE, "analyse/mistral", synthese)
 
 const hadithApi = {};
 let bulughJson;
+let riyadJson;
 function depuisHadithApi(fichier, numero) {
   hadithApi[fichier] ??= new Map(JSON.parse(readFileSync(join(SOURCES, fichier), "utf8")).hadiths.map((h) => [h.hadithnumber, h]));
   return hadithApi[fichier].get(numero);
-}
-
-// Riyad as-Salihin OpenITI : bloc « ### ||| N/ » jusqu'au titre suivant, balises de mise en page retirées (le texte lui-même n'est pas touché).
-let riyad;
-function depuisRiyad(numero) {
-  riyad ??= readFileSync(join(SOURCES, "openiti-riyad-assalihin.mARkdown"), "utf8");
-  const m = riyad.match(new RegExp(`^### \\|\\|\\| ${numero}/[^\\n]*\\n([\\s\\S]*?)(?=^#{2,3} )`, "m"));
-  return m?.[1].replace(/^# /gm, "").replace(/~~/g, "").replace(/PageV\d+P\d+|ms\d+/g, "").replace(/\s+/g, " ").trim();
 }
 
 // Pas de très longs hadiths sur la page (CLAUDE.md) : au-delà, le trait est retiré.
@@ -49,9 +43,11 @@ function hadithDe(refHadith) {
     bulughJson ??= new Map(JSON.parse(readFileSync(join(SOURCES, "bulugh_almaram.json"), "utf8")).hadiths.map((h) => [h.idInBook, h.arabic]));
     const n = trouveBulugh(bulughJson.get(Number(refHadith.match(/\d+$/)[0])) ?? "");
     hadith = n && { recueil, numero: Number(refHadith.match(/\d+$/)[0]), arabe: texteBulugh(n), degre: "" };
-  } else if (ref.startsWith("OpenITI") && recueil === "Riyad as-Salihin") {
-    const arabe = depuisRiyad(numero);
-    hadith = arabe && { recueil, numero, arabe, degre: "" };
+  } else if (recueil === "Riyad as-Salihin") {
+    // Rapprochement par le texte refait ici (le cache du filtre peut porter l'ancien numéro) ; numéro affiché = celui d'OpenITI.
+    riyadJson ??= new Map(JSON.parse(readFileSync(join(SOURCES, "riyad_assalihin.json"), "utf8")).hadiths.map((h) => [h.idInBook, h.arabic]));
+    const n = trouveRiyad(riyadJson.get(Number(refHadith.match(/\d+$/)[0])) ?? "");
+    hadith = n && { recueil, numero: n, arabe: texteRiyad(n), degre: "" };
   }
   return hadith;
 }

@@ -80,7 +80,7 @@ Fichiers dans `sources/` (ignoré par git : `coran/`, `hadith/`), contenu affich
 
 **Hadiths** (`sources/hadith/`) :
 - Bukhari, Al-Muwatta : `ara-bukhari.json`, `ara-malik.json` (hadith-api, domaine public, degrés fournis pour Al-Muwatta).
-- Riyad as-Salihin, Bulugh al-Maram : `openiti-*` (OpenITI, CC BY-NC-SA 4.0 : non commercial, nos traductions sous la même licence, URI des fichiers dans le README) ; sans diacritiques ni degré (source du degré à trouver).
+- Riyad as-Salihin, Bulugh al-Maram : `openiti-*` (OpenITI, CC BY-NC-SA 4.0 : non commercial, nos traductions sous la même licence, URI des fichiers dans le README) ; sans diacritiques ni degré (degré repris de la mention en fin de hadith : « رواه مسلم » → Sahih, « حسن صحيح » → Hasan Sahih). Numérotation différente de hadith-json : rapprochement par le texte (`openiti-riyad.mjs`, `openiti-bulugh.mjs`), numéro affiché pour Riyad = OpenITI (numéros fautifs réparés d’après les voisins), pour Bulugh = hadith-json.
 - `bukhari.json`, `malik.json`, `riyad_assalihin.json`, `bulugh_almaram.json` (hadith-json, sunnah.com, sans licence) : repérage interne uniquement, jamais affichés.
 - Un hadith présent dans plusieurs recueils est cité de préférence depuis Bukhari/Al-Muwatta.
 

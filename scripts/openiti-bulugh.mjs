@@ -6,7 +6,7 @@ import { fileURLToPath } from "node:url";
 const SOURCES = join(dirname(fileURLToPath(import.meta.url)), "../sources/hadith");
 
 // Normalisation pour comparer : sans voyelles ni ponctuation, variantes d'alif/ya/ta marbuta unifiées.
-const norm = (s) =>
+export const norm = (s) =>
   s
     .replace(/[ً-ْٰـ]/g, "")
     .replace(/[أإآ]/g, "ا")
