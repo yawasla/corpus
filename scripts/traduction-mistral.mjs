@@ -43,13 +43,19 @@ async function appel(consigne, contenu) {
   }
 }
 
-const REGLES = `Rules: always write the honorific ﷺ right after "the Prophet" / "le Prophète" / "el Profeta" / "النبي" (instead of translating "صلى الله عليه وسلم"); no superlatives added; keep proper names in their usual transliteration (Abu Bakr, Umar, Aisha...).`;
+const NOMS = { fr: "French", en: "English", es: "Spanish" };
+// Mistral met parfois des astérisques à la place des guillemets dans une citation : remplacés par ceux de la langue.
+// Guillemets de second niveau (parole dans la parole) : « … “…” … » en français et espagnol, “… ‘…’ …” en anglais.
+const GUILLEMETS = { fr: ["“", "”"], en: ["‘", "’"], es: ["“", "”"] };
+const guillemets = (t, l) => t.replace(/\*([^*]+)\*/g, (_, x) => GUILLEMETS[l][0] + x + GUILLEMETS[l][1]);
+
+const REGLES = `Rules: always write the honorific ﷺ right after "the Prophet" / "le Prophète" / "el Profeta" / "النبي" (instead of translating "صلى الله عليه وسلم"); no superlatives added; keep proper names in their usual transliteration (Abu Bakr, Umar, Aisha...); use typographic quotes, never the straight double quote character nor asterisks: French « … » with “ … ” for a quote inside a quote, Spanish « … » with “ … ” inside, English “ … ” with ‘ … ’ inside; always write "Allah" (never Dieu / God / Dios) and spell Umar, Uthman, Ali, Aisha consistently.`;
 
 const CONSIGNE_TRAITS = `Translate each short English trait describing a Companion of the Prophet into French, Spanish and Arabic. Keep them short, factual and in the same order. ${REGLES}
 Answer only in JSON: {"traits": [{"fr": "", "es": "", "ar": ""}]}`;
 
 const CONSIGNE_HADITH = `Translate this hadith from Arabic into French, English and Spanish, faithfully and in plain modern language, without adding commentary.
-For the chain of narrators, keep only the last narrator (the Companion), e.g. "Abu Bakr reported:" / "D'après Abu Bakr :" / "Según Abu Bakr:", then translate the rest of the text completely.
+For the chain of narrators, keep only the last narrator (the Companion), e.g. "Abu Bakr reported:" / "D'après Abu Bakr :" / "Según Abu Bakr:", then translate the rest of the text completely, to its very last word, including any Quran verse quoted in it (translate the verse too).
 Formulas like "رضي الله عنه" are translated by the usual formula of each language. ${REGLES}
 Answer only in JSON: {"fr": "", "en": "", "es": ""}`;
 
@@ -62,7 +68,8 @@ const fiche = JSON.parse(source.match(/= (\{[\s\S]*\});\s*$/)[1]);
 const enregistre = () => writeFileSync(fichier, source.replace(/= \{[\s\S]*\};\s*$/, `= ${JSON.stringify(fiche, null, 2)};\n`));
 
 // Traits : un seul appel pour tous ceux auxquels il manque une langue.
-const traits = fiche.traits.filter(({ trait }) => !trait.fr || !trait.es || !trait.ar);
+// Entrées validées (valide: true) jamais retouchées.
+const traits = fiche.traits.filter(({ trait, valide }) => !valide && (!trait.fr || !trait.es || !trait.ar));
 if (traits.length) {
   const { traits: tr } = await appel(CONSIGNE_TRAITS, traits.map((t, i) => `${i + 1}. ${t.trait.en}`).join("\n"));
   traits.forEach((t, i) => {
@@ -72,13 +79,24 @@ if (traits.length) {
 }
 
 // Hadiths : un appel par hadith non traduit, enregistré aussitôt (relance = reprise).
+// Traduction coupée (fin sur « : », « , », guillemet ouvrant, ou très courte face à l'arabe, chaîne de transmission comprise) : considérée comme manquante.
+const coupee = (t, arabe) => !t || /[:,«“‘]\s*$/.test(t) || t.length < 0.6 * arabe.replace(/[\u064B-\u0652\u0670]/g, "").length;
+
 let hadiths = 0;
-for (const { hadith } of fiche.traits) {
-  const manque = ["fr", "en", "es"].filter((l) => !hadith.traduction?.[l]);
+for (const { hadith, valide } of fiche.traits) {
+  if (valide) continue;
+  const manque = ["fr", "en", "es"].filter((l) => coupee(hadith.traduction?.[l], hadith.arabe));
   if (!manque.length) continue;
   const t = await appel(CONSIGNE_HADITH, `${hadith.recueil} ${hadith.numero}\n${hadith.arabe}`);
   hadith.traduction = { ...hadith.traduction };
-  for (const l of manque) hadith.traduction[l] = t[l] ?? "";
+  for (const l of manque) hadith.traduction[l] = guillemets(t[l] ?? "", l);
+  // Reprise langue par langue : une réponse trilingue longue se coupe parfois.
+  for (const l of manque.filter((l) => coupee(hadith.traduction[l], hadith.arabe))) {
+    const seule = await appel(CONSIGNE_HADITH.replace("into French, English and Spanish", `into ${NOMS[l]} only`).replace(/Answer only in JSON: .*$/, `Answer only in JSON: {"${l}": ""}`), `${hadith.recueil} ${hadith.numero}\n${hadith.arabe}`);
+    hadith.traduction[l] = guillemets(seule[l] ?? hadith.traduction[l], l);
+  }
+  const encore = manque.filter((l) => coupee(hadith.traduction[l], hadith.arabe));
+  if (encore.length) console.warn(`⚠️ ${hadith.recueil} ${hadith.numero} : traduction encore incomplète (${encore.join(", ")}), à relancer ou corriger à la main`);
   enregistre();
   hadiths++;
 }

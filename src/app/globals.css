@@ -445,6 +445,7 @@ body {
 
 .compagnon-resume {
   margin: 1.5rem 0 2rem;
+  font-size: 1.05rem;
   line-height: 1.7;
 }
 
@@ -454,6 +455,34 @@ body {
 
 .compagnon-trait {
   margin-bottom: 2rem;
+}
+
+/* Numéro de la liste à la taille du fait. */
+.compagnon-trait::marker {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Fait en titre, plus visible que le texte du hadith (version arabe ajustée plus bas). */
+.compagnon-trait__titre {
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.compagnon-trait__qualites {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-top: 0.4rem;
+}
+
+.compagnon-trait__qualite {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--bs-success-text-emphasis);
+  background: var(--bs-success-bg-subtle);
+  border: 1px solid var(--bs-success-border-subtle);
 }
 
 .compagnon-trait__arabe {
@@ -470,4 +499,30 @@ body {
 
 .compagnon-trait__ref {
   font-size: 0.85rem;
+}
+
+/* Fiche en arabe : titres et badges en Amiri, au moins aussi grands que le texte du hadith (lang posé sur <main>, connu dès le rendu statique). */
+main[lang="ar"] .compagnon-trait__titre {
+  font-family: var(--font-amiri);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+main[lang="ar"] .compagnon-traits {
+  list-style-type: arabic-indic;
+}
+
+main[lang="ar"] .compagnon-trait::marker {
+  font-family: var(--font-amiri);
+  font-size: 1.5rem;
+}
+
+main[lang="ar"] .compagnon-trait__qualite {
+  font-family: var(--font-amiri);
+  font-size: 0.95rem;
+}
+
+main[lang="ar"] .compagnon-resume {
+  font-family: var(--font-amiri);
+  font-size: 1.25rem;
 }

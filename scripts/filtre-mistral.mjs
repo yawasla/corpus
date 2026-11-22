@@ -51,7 +51,7 @@ verdict = "review" when the quality depends on an interpretation or a legal (fiq
 
 Examples (Companion: Abu Bakr):
 - "If I were to take a Khalil, I would have taken Abu Bakr" -> subject, "no" (a preference of the Prophet: the corpus does not rank Companions)
-- "Be firm, O Uhud! On you there are no more than a Prophet, a Siddiq and two martyrs" -> subject, "yes", trait "called Siddiq by the Prophet"
+- "Be firm, O Uhud! On you there are no more than a Prophet, a Siddiq and two martyrs" -> "no" (gives each Companion present a rank or title: ranking)
 - "The Prophet, Abu Bakr and Umar used to begin the prayer with Al-hamdu lillah" -> mention, "no"
 - "Asma bint Abi Bakr said: a woman asked the Prophet..." -> homonym, "no"
 - a long narrative where, late in the text, Umar says "none of you is like Abu Bakr" or "he was the companion of the cave" -> subject, "yes"
@@ -112,6 +112,7 @@ Group the hadiths that show the same scene or the same quality, then return at m
 Each trait must show a distinct quality or scene, only once: never split one scene (e.g. the Hijra) into several traits.
 For each trait: a concrete, positive fact (3 to 12 words, no superlatives), the main hadith (the clearest quote), and ALL the refs of the other hadiths showing the same thing, from every collection.
 Never keep a trait based on ranking or comparing Companions ("the best", "better than X", "none is like him", "the most..."), including the Prophet's preference for him ("if I were to take a Khalil", "the one who favored me most"): describe what he did, not his rank or a preference. Never pick a main hadith whose quote is a comparison.
+Never keep a legal ruling or judgement as a trait (custody, inheritance, zakat rules, punishments, how a rite is done): only what reveals his character.
 Use only refs from the list. Do not invent anything.
 Answer only in JSON: {"traits": [{"trait": "", "episode": "", "main": "ref", "others": ["ref"]}]}`;
 

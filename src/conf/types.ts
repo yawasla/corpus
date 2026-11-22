@@ -42,8 +42,11 @@ export type HadithFiche = {
 
 export type FicheCompagnon = {
   wikipedia: Record<Langue, string>;
+  // Hadiths écartés à la relecture (« Sahih al-Bukhari 1472 ») avec la raison : jamais repris par scripts/fiche.mjs.
+  exclus?: { ref: string; raison: string }[];
   resume: Record<Langue, string>;
   // Trait rédigé en anglais par la synthèse, traductions ajoutées à la relecture.
   // cle : trait d'origine de la synthèse, sert à retrouver les traductions quand la fiche est régénérée.
-  traits: { trait: Partial<Record<Langue, string>> & { en: string; cle?: string }; hadith: HadithFiche }[];
+  // valide : entrée relue et verrouillée, jamais modifiée par les scripts. qualites : badges rédigés par nous à partir du fait (le fait vient de la synthèse Mistral), un ou plusieurs.
+  traits: { trait: Partial<Record<Langue, string>> & { en: string; cle?: string; qualites?: Record<Langue, string>[] }; hadith: HadithFiche; valide?: boolean }[];
 };

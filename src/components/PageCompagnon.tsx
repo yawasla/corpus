@@ -4,6 +4,8 @@ import type { Langue } from "@/conf/types";
 import { LIBELLES } from "@/conf/libelles";
 import SeparateurOrnemental from "@/components/SeparateurOrnemental";
 
+const majuscule = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
+
 export default function PageCompagnon({ id, name, langue }: { id: string; name: string; langue: Langue }) {
   const compagnon = compagnons.find((c) => c.id === Number(id) && c.slug === name && c.disponible);
 
@@ -15,7 +17,7 @@ export default function PageCompagnon({ id, name, langue }: { id: string; name: 
   const fiche = getFiche(compagnon.id);
 
   return (
-    <main className="page-shell page-shell--lecture py-5">
+    <main className="page-shell page-shell--lecture py-5" lang={langue}>
       <h1 className="titre-accueil text-center mb-4" dir="rtl" lang="ar">
         {compagnon.nom.arabe}
       </h1>
@@ -35,8 +37,17 @@ export default function PageCompagnon({ id, name, langue }: { id: string; name: 
           <ol className="compagnon-traits">
             {fiche.traits.map(({ trait, hadith }) => (
               <li key={`${hadith.recueil}-${hadith.numero}`} className="compagnon-trait">
-                {/* Trait rédigé en anglais par la synthèse : repli sur l'anglais tant que la traduction manque. */}
-                <h3 className="h6 compagnon-trait__titre">{trait[langue] || trait.en}</h3>
+                {/* Fait rédigé en anglais par la synthèse : repli sur l'anglais tant que la traduction manque. */}
+                <h3 className="h6 compagnon-trait__titre">{majuscule(trait[langue] || trait.en)}</h3>
+                {trait.qualites && (
+                  <div className="compagnon-trait__qualites">
+                    {trait.qualites.map((q) => (
+                      <span key={q.en} className="badge rounded-pill compagnon-trait__qualite">
+                        {q[langue]}
+                      </span>
+                    ))}
+                  </div>
+                )}
                 <p className="compagnon-trait__arabe" dir="rtl" lang="ar">
                   {hadith.arabe}
                 </p>

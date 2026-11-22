@@ -51,8 +51,11 @@ Ne pas anticiper ou développer de fonctionnalités hors du périmètre défini 
 - Aucune hiérarchie entre Compagnons : pas de trait fondé sur un mérite comparé ou une préférence (« le meilleur », « meilleur que X », « nul ne l'égale »), y compris une préférence du Prophète pour un Compagnon (« si je devais prendre un khalil », « celui qui m'a le plus soutenu », « le plus aimé »), ce n'est pas le but du corpus.
 - Chaque trait mentionné dans la synthèse s'appuie sur un hadith cité sur la page.
 - Chaque hadith est affiché avec son texte arabe, sa référence et son degré d'authenticité.
-- Pas de très longs hadiths (texte arabe ≤ 1 200 caractères, `MAX_CARACTERES` dans `scripts/fiche.mjs`) : sinon le trait est retiré (un doublon peut illustrer un autre fait).
-- Répartition des recueils sur une page, si possible : Bukhari ≤ 30 %, Al-Muwatta ≤ 25 %, Riyad as-Salihin ≤ 25 %, Bulugh al-Maram ≤ 20 % (`QUOTAS` dans `scripts/fiche.mjs`) ; un seul trait par épisode.
+- Relecture entrée par entrée : une entrée validée reçoit `"valide": true` dans `compagnon_NNN.ts` et n'est plus jamais modifiée par `fiche` ni `traduction`.
+- Hadith écarté : ajouté à `exclus` (réf + raison), jamais repris par `fiche`.
+- Relecture : vérifier sur l'arabe le rapporteur, qui parle et les coupures ; « Allah », « shaytan », guillemets « … “…” … ». Le fait décrit le geste du Compagnon ; les qualités (par nous, plusieurs par fait) sont des qualités, pas des états, lues sur tout le hadith. Préférer la version à chaîne complète d'un *balagh*.
+- Pas de très longs hadiths (texte arabe ≤ 2 000 caractères, `MAX_CARACTERES` dans `scripts/fiche.mjs`) : sinon le trait est retiré (un doublon peut illustrer un autre fait).
+- Répartition des recueils sur une page, si possible : Bukhari ≤ 30 %, Al-Muwatta ≤ 25 %, Riyad as-Salihin ≤ 25 %, Bulugh al-Maram ≤ 20 % (`QUOTAS` dans `scripts/fiche.mjs`), jamais de décision juridique comme trait.
 - Petit projet : les pages restent courtes (15 à 20 traits), pas d'étude détaillée ; exception pour les quatre califes bien guidés (ids 1–4) : 25 à 30 traits.
 - Texte arabe des hadiths repris des sources open source listées dans « Sources de données », traduction FR/EN/ES réalisée par nos soins et indiquée comme telle sur le site.
 - Liste des 100 Compagnons dans `src/data/config.ts` (id 1–100 = URL `/compagnons/<id>/<slug>`) : premier jet à vérifier contre les recueils, ordre à figer avant publication.
@@ -90,7 +93,7 @@ Fichiers dans `sources/` (ignoré par git : `coran/`, `hadith/`), contenu affich
 | `npm run compagnons` | Repère les hadiths candidats de chaque Compagnon (A/R/B/X) → `analyse/compagnons/`. |
 | `npm run filtre -- <id>… \| tous` | Tri Mistral (yes/no/review, trait, épisode, citation vérifiée) → `analyse/mistral/NNN-slug.md`. Clé `MISTRAL_API_KEY` dans `.env.local`, modèle `mistral-medium-latest` (`MODELE=` pour changer). |
 | `npm run filtre -- synthese <id>…` | Regroupe les retenus en 50 traits majeurs max, sans hiérarchie entre Compagnons → `NNN-slug-synthese.md`. |
-| `npm run fiche -- <id>` | Préremplit `src/data/compagnons/compagnon_NNN.ts` depuis la synthèse : 25 à 30 traits (ids 1–4) ou 15 à 20, hadith ≤ 1 200 caractères, texte arabe verbatim, ﷺ ajouté ; garde résumé et traductions existants. |
+| `npm run fiche -- <id>` | Préremplit `src/data/compagnons/compagnon_NNN.ts` depuis la synthèse : 25 à 30 traits (ids 1–4) ou 15 à 20, hadith ≤ 2 000 caractères, texte arabe verbatim, ﷺ ajouté ; garde résumé et traductions existants. |
 | `npm run traduction -- <id>` | Traduit avec Mistral les traits (en → fr/es/ar) et les hadiths (arabe → fr/en/es, chaîne réduite au Compagnon) d'une fiche ; ne remplit que les champs vides. |
 | `npm run filtre -- test <fichier>` | Compare la consigne à un échantillon validé à la main (calibrage). |
 

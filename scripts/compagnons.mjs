@@ -165,18 +165,26 @@ function trouve(texte, variantes) {
 function arabeNorm(s) {
   return s
     .replace(/[ً-ْٰـ]/g, "")
-    .replace(/[^ء-ي]/g, "")
-    .slice(0, 80);
+    .replace(/[^ء-ي]/g, "");
 }
 
 // Index texte arabe → numéro dans la source affichable (hadith-api), les numérotations différant des fichiers anglais.
+// Texte entier comparé (le début est souvent la même chaîne de transmission) ; repli sur le texte sans la fin, seulement s'il est unique.
 function indexHadithApi(fichier) {
-  const index = new Map();
+  const entier = new Map();
+  const debut = new Map();
   for (const h of JSON.parse(readFileSync(join(SOURCES, fichier), "utf8")).hadiths) {
     const k = arabeNorm(h.text);
-    if (!index.has(k)) index.set(k, h.hadithnumber);
+    if (!entier.has(k)) entier.set(k, h.hadithnumber);
+    const d = k.slice(0, Math.floor(k.length * 0.9));
+    debut.set(d, debut.has(d) ? null : h.hadithnumber);
   }
-  return index;
+  return {
+    get(texte) {
+      const k = arabeNorm(texte);
+      return entier.get(k) ?? debut.get(k.slice(0, Math.floor(k.length * 0.9))) ?? null;
+    },
+  };
 }
 
 // Riyad as-Salihin OpenITI : un hadith par bloc « ### ||| N/... », N = numéro du recueil.

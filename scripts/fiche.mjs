@@ -30,7 +30,7 @@ function depuisRiyad(numero) {
 }
 
 // Pas de très longs hadiths sur la page (CLAUDE.md) : au-delà, le trait est retiré.
-const MAX_CARACTERES = 1200;
+const MAX_CARACTERES = 2000;
 const cacheFiltre = JSON.parse(readFileSync(join(RACINE, "analyse/mistral", synthese.replace("-synthese", "")), "utf8"));
 
 function hadithDe(refHadith) {
@@ -61,6 +61,11 @@ const MAX_TRAITS = id <= 4 ? 30 : 20; // cible 25–30 (ids 1–4) ou 15–20 se
 // Répartition homogène des recueils (CLAUDE.md) : quotas sur le nombre de traits, relâchés seulement s'il manque des traits.
 const QUOTAS = { "Sahih al-Bukhari": 0.3, "Al-Muwatta": 0.25, "Riyad as-Salihin": 0.25, "Bulugh al-Maram": 0.2 };
 const quota = (recueil) => Math.round((QUOTAS[recueil] ?? 0) * MAX_TRAITS);
+const JURIDIQUE = /\b(rul(ed|ing|e)|judg(ed|ement|ment)|inheritance|custody|compensation|punish\w*)\b/i;
+// Exclusions de relecture conservées dans la fiche existante.
+const fichierFiche = join(RACINE, `src/data/compagnons/compagnon_${pad}.ts`);
+const exclusFiche = existsSync(fichierFiche) ? (JSON.parse(readFileSync(fichierFiche, "utf8").match(/= (\{[\s\S]*\});\s*$/)[1]).exclus ?? []) : [];
+const exclus = new Set(exclusFiche.map((e) => e.ref));
 const fiches = [];
 const episodes = new Set();
 const parRecueil = {};
@@ -70,7 +75,7 @@ function choisir(t, respecterQuotas) {
   // Seulement le hadith principal : un doublon peut raconter un autre fait de la même période (ex. le baiser au lieu du discours).
   const candidats = [t.main]
     .map(hadithDe)
-    .filter((h) => h && h.arabe.length <= MAX_CARACTERES && (!respecterQuotas || (parRecueil[h.recueil] ?? 0) < quota(h.recueil)));
+    .filter((h) => h && !exclus.has(`${h.recueil} ${h.numero}`) && h.arabe.length <= MAX_CARACTERES && (!respecterQuotas || (parRecueil[h.recueil] ?? 0) < quota(h.recueil)));
   return (
     candidats.find((h) => `${h.recueil} ${h.numero}` === t.main) ??
     candidats.sort((a, b) => (parRecueil[a.recueil] ?? 0) - (parRecueil[b.recueil] ?? 0) || a.arabe.length - b.arabe.length)[0]
@@ -85,15 +90,15 @@ function ajouter(t, hadith) {
 
 for (const t of traits) {
   if (fiches.length >= MAX_TRAITS) break;
-  // Un seul trait par épisode : les autres traits de la même scène sont des doublons.
-  if (t.episode && episodes.has(t.episode.toLowerCase())) continue;
+  // Décision juridique (garde, héritage, règle de zakat...) : jamais un trait, même si la synthèse la laisse passer.
+  if (JURIDIQUE.test(t.trait)) continue;
   const hadith = choisir(t, true);
   if (hadith) ajouter(t, hadith);
   else ecartes.push(t);
 }
 for (const t of ecartes) {
   if (fiches.length >= MAX_TRAITS) break;
-  if (t.episode && episodes.has(t.episode.toLowerCase())) continue;
+  if (JURIDIQUE.test(t.trait)) continue;
   const hadith = choisir(t, false);
   if (hadith) ajouter(t, hadith);
   else console.warn(`⚠️ ${t.main} : aucun hadith court (≤ ${MAX_CARACTERES} car.) avec texte arabe, trait ignoré : ${t.trait}`);
@@ -104,16 +109,26 @@ const fichier = join(RACINE, `src/data/compagnons/compagnon_${pad}.ts`);
 const vide = { fr: "", en: "", es: "", ar: "" };
 let ancien = { wikipedia: vide, resume: vide, traits: [] };
 if (existsSync(fichier)) ancien = JSON.parse(readFileSync(fichier, "utf8").match(/= (\{[\s\S]*\});\s*$/)[1]);
+// Entrées validées (valide: true) : reprises telles quelles, en tête, jamais remplacées.
+const valides = ancien.traits.filter((t) => t.valide);
+const refsValides = new Set(valides.map((t) => `${t.hadith.recueil} ${t.hadith.numero}`));
 const traductions = new Map(ancien.traits.map((t) => [t.trait.cle ?? t.trait.en, t.trait]));
 const traductionsHadiths = new Map(ancien.traits.map((t) => [`${t.hadith.recueil} ${t.hadith.numero}`, t.hadith.traduction]));
 const fiche = {
   wikipedia: ancien.wikipedia,
+  exclus: exclusFiche,
   resume: ancien.resume,
   // Trait déjà traduit (même trait de synthèse) : on garde la version relue, sinon trait anglais brut avec sa clé.
-  traits: fiches.map((f) => ({
-    hadith: { ...f.hadith, traduction: traductionsHadiths.get(`${f.hadith.recueil} ${f.hadith.numero}`) },
-    trait: traductions.get(f.trait.en) ?? { cle: f.trait.en, ...f.trait },
-  })),
+  traits: [
+    ...valides,
+    ...fiches
+      .filter((f) => !refsValides.has(`${f.hadith.recueil} ${f.hadith.numero}`))
+      .slice(0, Math.max(0, MAX_TRAITS - valides.length))
+      .map((f) => ({
+        hadith: { ...f.hadith, traduction: traductionsHadiths.get(`${f.hadith.recueil} ${f.hadith.numero}`) },
+        trait: traductions.get(f.trait.en) ?? { cle: f.trait.en, ...f.trait },
+      })),
+  ],
 };
 writeFileSync(
   fichier,
