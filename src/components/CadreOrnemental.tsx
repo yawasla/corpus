@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
 import Image from "next/image";
-import cadre from "@/assets/cadre.webp";
+import cadre from "@/assets/cadre.svg";
 
-// Cadre décoratif : le coin dessiné dans cadre.webp, réutilisé aux 4 coins
+// Cadre décoratif : le coin dessiné dans cadre.svg, réutilisé aux 4 coins
 // par rotation (90°/180°/270°), + une bordure fine entre les coins.
 export default function CadreOrnemental({ children }: { children: ReactNode }) {
   return (

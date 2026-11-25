@@ -395,37 +395,41 @@ body {
 .cadre-ornemental {
   --or-exterieur: #e7c57c;
   --or-interieur: #e19b00;
-  --coin-taille: 2.5rem;
+  /* Mêmes mesures que cadre.svg (viewBox 40), en px entiers : net et aligné sur écrans 1x comme 2x. */
+  --coin-taille: 40px;
+  --filet: 3px;
+  --ecart-filets: 7px;
   position: relative;
   max-width: 50rem;
   margin: 2rem auto 0;
-  padding: 0.45rem;
+  padding: var(--ecart-filets);
   background-repeat: no-repeat;
   background-image: linear-gradient(var(--or-exterieur), var(--or-exterieur)),
     linear-gradient(var(--or-exterieur), var(--or-exterieur)), linear-gradient(var(--or-exterieur), var(--or-exterieur)),
     linear-gradient(var(--or-exterieur), var(--or-exterieur));
-  background-size: calc(100% - 2 * var(--coin-taille)) 2.5px, calc(100% - 2 * var(--coin-taille)) 2.5px,
-  2.5px calc(100% - 2 * var(--coin-taille)), 2.5px calc(100% - 2 * var(--coin-taille));
+  background-size: calc(100% - 2 * var(--coin-taille)) var(--filet), calc(100% - 2 * var(--coin-taille)) var(--filet),
+    var(--filet) calc(100% - 2 * var(--coin-taille)), var(--filet) calc(100% - 2 * var(--coin-taille));
   background-position: var(--coin-taille) 0, var(--coin-taille) 100%, 0 var(--coin-taille), 100% var(--coin-taille);
 }
 
 .cadre-ornemental__interieur {
-  --coin-taille-interieur: calc(2.5rem - 0.5rem);
+  --coin-taille-interieur: calc(var(--coin-taille) - var(--ecart-filets));
   padding: 1.5rem;
   background-repeat: no-repeat;
   background-image: linear-gradient(var(--or-interieur), var(--or-interieur)),
     linear-gradient(var(--or-interieur), var(--or-interieur)), linear-gradient(var(--or-interieur), var(--or-interieur)),
     linear-gradient(var(--or-interieur), var(--or-interieur));
-  background-size: calc(100% - 2 * var(--coin-taille-interieur)) 2.5px, calc(100% - 2 * var(--coin-taille-interieur)) 2.5px,
-  2.5px calc(100% - 2 * var(--coin-taille-interieur)), 2.5px calc(100% - 2 * var(--coin-taille-interieur));
+  background-size: calc(100% - 2 * var(--coin-taille-interieur)) var(--filet),
+    calc(100% - 2 * var(--coin-taille-interieur)) var(--filet), var(--filet) calc(100% - 2 * var(--coin-taille-interieur)),
+    var(--filet) calc(100% - 2 * var(--coin-taille-interieur));
   background-position: var(--coin-taille-interieur) 0, var(--coin-taille-interieur) 100%, 0 var(--coin-taille-interieur),
     100% var(--coin-taille-interieur);
 }
 
 .cadre-ornemental__coin {
   position: absolute;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: var(--coin-taille);
+  height: var(--coin-taille);
   pointer-events: none;
 }
 

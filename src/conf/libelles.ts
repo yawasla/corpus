@@ -22,7 +22,6 @@ type Libelles = {
   coran: string;
   compagnons: string;
   bientot: string;
-  lireWikipedia: string;
 };
 
 export const LIBELLES: Record<Langue, Libelles> = {
@@ -48,7 +47,6 @@ export const LIBELLES: Record<Langue, Libelles> = {
     coran: "Le Saint Coran",
     compagnons: "Les Compagnons",
     bientot: "Bientôt disponible.",
-    lireWikipedia: "Lire sur Wikipédia",
   },
   en: {
     sommaire: "Contents",
@@ -72,7 +70,6 @@ export const LIBELLES: Record<Langue, Libelles> = {
     coran: "The Holy Quran",
     compagnons: "The Companions",
     bientot: "Coming soon.",
-    lireWikipedia: "Read on Wikipedia",
   },
   es: {
     sommaire: "Índice",
@@ -96,7 +93,6 @@ export const LIBELLES: Record<Langue, Libelles> = {
     coran: "El Sagrado Corán",
     compagnons: "Los Compañeros",
     bientot: "Próximamente.",
-    lireWikipedia: "Leer en Wikipedia",
   },
   ar: {
     sommaire: "الفهرس",
@@ -120,6 +116,5 @@ export const LIBELLES: Record<Langue, Libelles> = {
     coran: "القرآن الكريم",
     compagnons: "الصحابة",
     bientot: "قريبًا.",
-    lireWikipedia: "اقرأ في ويكيبيديا",
   },
 };

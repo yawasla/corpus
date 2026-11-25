@@ -47,6 +47,7 @@ Ne pas anticiper ou développer de fonctionnalités hors du périmètre défini 
 ### Bibliothèque des Compagnons
 - Une page liste tous les Compagnons présents dans les recueils retenus (une centaine, un peu plus si la matière le permet : au moins 3 faits pertinents sur le Compagnon), avec une page dédiée par Compagnon.
 - Chaque page décrit la personnalité du Compagnon : une courte synthèse, puis les hadiths cités, limités à quatre recueils : Sahih al-Bukhari, Al-Muwatta, Riyad as-Salihin et Bulugh al-Maram.
+- Synthèse (`resume`) : 2-3 phrases sur les qualités montrées par les traits de la page, sans biographie ni lien externe (faisable pour tous les Compagnons).
 - On n'analyse pas le contenu juridique d'un hadith, mais ce qu'il révèle des qualités du Compagnon.
 - Aucune hiérarchie entre Compagnons : pas de trait fondé sur un mérite comparé ou une préférence (« le meilleur », « meilleur que X », « nul ne l'égale »), y compris une préférence du Prophète pour un Compagnon (« si je devais prendre un khalil », « celui qui m'a le plus soutenu », « le plus aimé »), ce n'est pas le but du corpus.
 - Chaque trait mentionné dans la synthèse s'appuie sur un hadith cité sur la page.

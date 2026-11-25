@@ -29,10 +29,7 @@ export default function PageCompagnon({ id, name, langue }: { id: string; name: 
       ) : (
         <>
           <p className="compagnon-resume">
-            {fiche.resume[langue]}{" "}
-            <a href={fiche.wikipedia[langue]} target="_blank" rel="noopener noreferrer">
-              {libelles.lireWikipedia}
-            </a>
+            {fiche.resume[langue]}
           </p>
           <ol className="compagnon-traits">
             {fiche.traits.map(({ trait, hadith }) => (

@@ -1,13 +1,7 @@
 import type { FicheCompagnon } from "@/conf/types";
 
-// Généré par scripts/fiche.mjs puis relu à la main (résumé Wikipédia, traits, traductions).
+// Généré par scripts/fiche.mjs puis relu à la main (résumé, traits, traductions).
 export const fiche: FicheCompagnon = {
-  "wikipedia": {
-    "fr": "https://fr.wikipedia.org/wiki/Abou_Bakr_As-Siddiq",
-    "en": "https://en.wikipedia.org/wiki/Abu_Bakr",
-    "es": "https://es.wikipedia.org/wiki/Abu_Bakr",
-    "ar": "https://ar.wikipedia.org/wiki/أبو_بكر_الصديق"
-  },
   "exclus": [
     {
       "ref": "Sahih al-Bukhari 1472",
@@ -47,10 +41,10 @@ export const fiche: FicheCompagnon = {
     }
   ],
   "resume": {
-    "fr": "Abou Bakr As-Siddiq (vers 573-634) fut l’un des premiers à embrasser l’islam et un compagnon du Prophète ﷺ depuis La Mecque. Il l’accompagna lors de l’Hégire vers Médine en 622, et sa fille Aïcha devint l’épouse du Prophète ﷺ. À la mort de celui-ci en 632, il devint le premier calife ; son court califat fut marqué par les guerres de la Ridda et le début de la compilation du Coran. Il mourut à Médine en 634 et fut enterré auprès du Prophète ﷺ.",
-    "en": "Abu Bakr as-Siddiq (c. 573–634) was among the first to embrace Islam and a companion of the Prophet ﷺ since Mecca. He accompanied him on the Hijra to Medina in 622, and his daughter Aisha became the Prophet ﷺ’s wife. When the Prophet ﷺ died in 632, he became the first caliph; his short caliphate saw the Ridda wars and the beginning of the compilation of the Quran. He died in Medina in 634 and was buried beside the Prophet ﷺ.",
-    "es": "Abu Bakr as-Siddiq (c. 573-634) fue de los primeros en abrazar el islam y compañero del Profeta ﷺ desde La Meca. Lo acompañó en la Hégira a Medina en 622, y su hija Aisha se convirtió en esposa del Profeta ﷺ. A la muerte de este en 632, se convirtió en el primer califa; su breve califato estuvo marcado por las guerras de la Ridda y el inicio de la compilación del Corán. Murió en Medina en 634 y fue enterrado junto al Profeta ﷺ.",
-    "ar": "أبو بكر الصديق (نحو 573–634م) من أوائل من أسلموا، وصاحب النبي ﷺ منذ مكة. رافقه في الهجرة إلى المدينة سنة 622م، وتزوج النبي ﷺ ابنته عائشة. بعد وفاة النبي ﷺ سنة 632م صار أول خليفة للمسلمين، وشهدت خلافته القصيرة حروب الردة وبداية جمع القرآن. توفي في المدينة سنة 634م ودُفن بجوار النبي ﷺ."
+    "fr": "Les hadiths retenus montrent un homme d’une fidélité constante au Prophète ﷺ, de la grotte de Thawr jusqu’après sa mort, prompt à reconnaître ses torts et à demander pardon, profondément attaché au Coran et sensible jusqu’aux larmes, généreux envers les pauvres et animé d’un esprit fraternel.",
+    "en": "The hadiths cited here show a man of unwavering faithfulness to the Prophet ﷺ, from the cave of Thawr to after his death, quick to admit his wrongs and to ask forgiveness, deeply attached to the Quran and moved to tears, generous towards the poor and driven by a spirit of brotherhood.",
+    "es": "Los hadices citados muestran a un hombre de una fidelidad constante al Profeta ﷺ, desde la cueva de Thawr hasta después de su muerte, pronto a reconocer sus errores y a pedir perdón, profundamente apegado al Corán y sensible hasta las lágrimas, generoso con los pobres y animado por un espíritu fraternal.",
+    "ar": "تُظهر الأحاديث المختارة رجلًا دائم الوفاء للنبي ﷺ، من غار ثور إلى ما بعد وفاته، سريعًا إلى الاعتراف بخطئه وطلب العفو، شديد التعلق بالقرآن، رقيق القلب حتى البكاء، كريمًا مع الفقراء، تحدوه روح الأخوة."
   },
   "traits": [
     {
@@ -60,17 +54,17 @@ export const fiche: FicheCompagnon = {
         "arabe": "حَدَّثَنَا مُحَمَّدُ بْنُ سِنَانٍ، حَدَّثَنَا هَمَّامٌ، عَنْ ثَابِتٍ، عَنْ أَنَسٍ، عَنْ أَبِي بَكْرٍ ـ رضى الله عنه ـ قَالَ قُلْتُ لِلنَّبِيِّ صلى الله عليه وسلم وَأَنَا فِي الْغَارِ لَوْ أَنَّ أَحَدَهُمْ نَظَرَ تَحْتَ قَدَمَيْهِ لأَبْصَرَنَا‏.‏ فَقَالَ ‏ \"‏ مَا ظَنُّكَ يَا أَبَا بَكْرٍ بِاثْنَيْنِ اللَّهُ ثَالِثُهُمَا ‏\"‏‏.‏",
         "degre": "Sahih",
         "traduction": {
-          "fr": "D'après Abu Bakr (qu'Allah soit satisfait de lui) : Je dis au Prophète ﷺ alors que nous étions dans la grotte : « Si l'un d'eux regardait sous ses pieds, il nous verrait. » Il répondit : « Que penses-tu, ô Abu Bakr, de deux personnes dont Allah est le troisième ? »",
-          "en": "Abu Bakr, may Allah be pleased with him, reported: I said to the Prophet ﷺ while we were in the cave: 'If one of them looked under his feet, he would see us.' He said: 'What do you think, O Abu Bakr, of two whose third is God?'",
+          "fr": "D’après Abu Bakr (qu’Allah l’agrée) : Je dis au Prophète ﷺ alors que nous étions dans la grotte : « Si l’un d’eux regardait sous ses pieds, il nous verrait. » Il répondit : « Que penses-tu, ô Abu Bakr, de deux personnes dont Allah est le troisième ? »",
+          "en": "Abu Bakr (may Allah be pleased with him) reported: I said to the Prophet ﷺ while we were in the cave: “If one of them looked under his feet, he would see us.” He said: “What do you think, O Abu Bakr, of two whose third is Allah?”",
           "es": "Según Abu Bakr (que Allah esté complacido con él): Le dije al Profeta ﷺ cuando estábamos en la cueva: «Si uno de ellos mirara bajo sus pies, nos vería». Él respondió: «¿Qué opinas, oh Abu Bakr, de dos personas cuyo tercero es Allah?»"
         }
       },
       "trait": {
         "cle": "trusted companion in the cave of Thawr",
-        "en": "trusted companion in the cave of Thawr",
-        "fr": "compagnon de confiance dans la grotte de Thawr",
-        "es": "compañero de confianza en la cueva de Thawr",
-        "ar": "رفيق موثوق به في غار ثور",
+        "en": "Worried for the Prophet ﷺ in the cave of Thawr",
+        "fr": "S’est inquiété pour le Prophète ﷺ dans la grotte de Thawr",
+        "es": "Se preocupó por el Profeta ﷺ en la cueva de Thawr",
+        "ar": "أشفق على النبي ﷺ في غار ثور",
         "qualites": [
           {
             "fr": "Proximité avec le Prophète ﷺ",
@@ -102,10 +96,10 @@ export const fiche: FicheCompagnon = {
       },
       "trait": {
         "cle": "defended the Prophet ﷺ from harm",
-        "en": "defended the Prophet ﷺ from harm",
-        "fr": "a défendu le Prophète ﷺ du mal",
-        "es": "defendió al Profeta ﷺ del daño",
-        "ar": "دافع عن النبي ﷺ من الأذى",
+        "en": "Defended the Prophet ﷺ against those who harmed him",
+        "fr": "A défendu le Prophète ﷺ contre ceux qui lui faisaient du mal",
+        "es": "Defendió al Profeta ﷺ de quienes le hacían daño",
+        "ar": "دافع عن النبي ﷺ ممن آذاه",
         "qualites": [
           {
             "fr": "Courage",
@@ -143,10 +137,10 @@ export const fiche: FicheCompagnon = {
       },
       "trait": {
         "cle": "believed in the Prophet ﷺ's words without seeing",
-        "en": "believed in the Prophet ﷺ's words without seeing",
-        "fr": "a cru aux paroles du Prophète ﷺ sans les voir",
-        "es": "creyó en las palabras del Profeta ﷺ sin verlas",
-        "ar": "آمن بكلمات النبي ﷺ دون أن يراها",
+        "en": "Believed the words of the Prophet ﷺ without having witnessed it",
+        "fr": "A cru aux paroles du Prophète ﷺ sans avoir été témoin",
+        "es": "Creyó en las palabras del Profeta ﷺ sin haber sido testigo",
+        "ar": "صدّق كلام النبي ﷺ دون أن يشهد ما أخبر به",
         "qualites": [
           {
             "fr": "Foi sincère",
@@ -179,7 +173,7 @@ export const fiche: FicheCompagnon = {
       "trait": {
         "cle": "consoled the Prophet ﷺ with himself and his money",
         "en": "Asked Umar for forgiveness, then defended him before the Prophet ﷺ",
-        "fr": "Demanda pardon à Umar puis prit sa défense devant le Prophète ﷺ",
+        "fr": "A demandé pardon à Umar, puis a pris sa défense devant le Prophète ﷺ",
         "es": "Pidió perdón a Umar y luego lo defendió ante el Profeta ﷺ",
         "ar": "طلب العفو من عمر ثم دافع عنه أمام النبي ﷺ",
         "qualites": [
@@ -225,16 +219,16 @@ export const fiche: FicheCompagnon = {
         "ar": "كان يخشى أن يكون قد أساء إلى غيره",
         "qualites": [
           {
-            "fr": "Respect de l’adversaire",
-            "en": "Respect for the adversary",
-            "es": "Respeto al adversario",
-            "ar": "احترام الخصم"
-          },
-          {
             "fr": "Fidélité au Prophète ﷺ",
             "en": "Faithfulness to the Prophet ﷺ",
             "es": "Fidelidad al Profeta ﷺ",
             "ar": "الوفاء للنبي ﷺ"
+          },
+          {
+            "fr": "Respect de l’ennemi",
+            "en": "Respect for the enemy",
+            "es": "Respeto al enemigo",
+            "ar": "احترام العدو"
           },
           {
             "fr": "Écoute du conseil",
@@ -247,12 +241,6 @@ export const fiche: FicheCompagnon = {
             "en": "Fear of Allah",
             "es": "Temor de Allah",
             "ar": "خشية الله"
-          },
-          {
-            "fr": "Humilité",
-            "en": "Humility",
-            "es": "Humildad",
-            "ar": "التواضع"
           },
           {
             "fr": "Examen de conscience",
@@ -284,9 +272,9 @@ export const fiche: FicheCompagnon = {
       },
       "trait": {
         "cle": "fulfilled the Prophet ﷺ's promises after his death",
-        "en": "fulfilled the Prophet ﷺ's promises after his death",
-        "fr": "a accompli les promesses du Prophète ﷺ après sa mort",
-        "es": "cumplió las promesas del Profeta ﷺ después de su muerte",
+        "en": "Kept the promises of the Prophet ﷺ after his death",
+        "fr": "A tenu les promesses du Prophète ﷺ après sa mort",
+        "es": "Cumplió las promesas del Profeta ﷺ después de su muerte",
         "ar": "أوفى بوعود النبي ﷺ بعد وفاته",
         "qualites": [
           {
@@ -584,7 +572,7 @@ export const fiche: FicheCompagnon = {
       "trait": {
         "cle": "not vain in dress",
         "en": "Worried that his garment trailed, for fear of pride",
-        "fr": "S’inquiéta que son izar traîne, par crainte de l’orgueil",
+        "fr": "S’est inquiété que son izar traîne, par crainte de l’orgueil",
         "es": "Se inquietó de que su izar arrastrara, por temor al orgullo",
         "ar": "خشي أن يُعدّ جرُّ إزاره خيلاء",
         "qualites": [
@@ -640,12 +628,6 @@ export const fiche: FicheCompagnon = {
             "en": "Fairness",
             "es": "Equidad",
             "ar": "العدل"
-          },
-          {
-            "fr": "Connaissance du Coran",
-            "en": "Knowledge of the Quran",
-            "es": "Conocimiento del Corán",
-            "ar": "العلم بالقرآن"
           },
           {
             "fr": "Attachement au Coran",
@@ -819,7 +801,7 @@ export const fiche: FicheCompagnon = {
       "trait": {
         "cle": "defended the Prophet ﷺ's authority",
         "en": "Remained firm in his trust in the Prophet ﷺ at Hudaybiya",
-        "fr": "Resta ferme dans sa confiance envers le Prophète ﷺ à Hudaybiya",
+        "fr": "Est resté ferme dans sa confiance envers le Prophète ﷺ à Hudaybiya",
         "es": "Se mantuvo firme en su confianza en el Profeta ﷺ en Hudaybiya",
         "ar": "ثبت على ثقته بالنبي ﷺ يوم الحديبية",
         "qualites": [
@@ -883,12 +865,6 @@ export const fiche: FicheCompagnon = {
             "ar": "قربه من النبي ﷺ"
           },
           {
-            "fr": "Sensibilité",
-            "en": "Sensitivity",
-            "es": "Sensibilidad",
-            "ar": "رقة القلب"
-          },
-          {
             "fr": "Attachement au Coran",
             "en": "Attachment to the Quran",
             "es": "Apego al Corán",
@@ -901,16 +877,16 @@ export const fiche: FicheCompagnon = {
             "ar": "المواظبة على الصلاة"
           },
           {
-            "fr": "Courage",
-            "en": "Courage",
-            "es": "Valentía",
-            "ar": "الشجاعة"
-          },
-          {
             "fr": "Crainte d’Allah",
             "en": "Fear of Allah",
             "es": "Temor de Allah",
             "ar": "خشية الله"
+          },
+          {
+            "fr": "Sensibilité",
+            "en": "Sensitivity",
+            "es": "Sensibilidad",
+            "ar": "رقة القلب"
           }
         ]
       },
@@ -1030,9 +1006,9 @@ export const fiche: FicheCompagnon = {
       },
       "trait": {
         "cle": "freed Bilal for Allah's sake",
-        "en": "freed Bilal for Allah's sake",
-        "fr": "a affranchi Bilal pour l'amour d'Allah",
-        "es": "liberó a Bilal por el amor de Alá",
+        "en": "Freed Bilal for the sake of Allah",
+        "fr": "A affranchi Bilal pour l’amour d’Allah",
+        "es": "Liberó a Bilal por amor a Allah",
         "ar": "أعتق بلالاً ابتغاء وجه الله",
         "qualites": [
           {
@@ -1419,7 +1395,7 @@ export const fiche: FicheCompagnon = {
       "trait": {
         "cle": "wept at the cessation of Revelation",
         "en": "Wept over the end of the Revelation",
-        "fr": "Pleura la fin de la Révélation",
+        "fr": "A pleuré la fin de la Révélation",
         "es": "Lloró el fin de la Revelación",
         "ar": "بكى انقطاع الوحي",
         "qualites": [

@@ -41,7 +41,6 @@ export type HadithFiche = {
 };
 
 export type FicheCompagnon = {
-  wikipedia: Record<Langue, string>;
   // Hadiths écartés à la relecture (« Sahih al-Bukhari 1472 ») avec la raison : jamais repris par scripts/fiche.mjs.
   exclus?: { ref: string; raison: string }[];
   resume: Record<Langue, string>;

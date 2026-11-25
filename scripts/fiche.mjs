@@ -103,7 +103,7 @@ console.log(`répartition : ${JSON.stringify(parRecueil)}`);
 
 const fichier = join(RACINE, `src/data/compagnons/compagnon_${pad}.ts`);
 const vide = { fr: "", en: "", es: "", ar: "" };
-let ancien = { wikipedia: vide, resume: vide, traits: [] };
+let ancien = { resume: vide, traits: [] };
 if (existsSync(fichier)) ancien = JSON.parse(readFileSync(fichier, "utf8").match(/= (\{[\s\S]*\});\s*$/)[1]);
 // Entrées validées (valide: true) : reprises telles quelles, en tête, jamais remplacées.
 const valides = ancien.traits.filter((t) => t.valide);
@@ -111,7 +111,6 @@ const refsValides = new Set(valides.map((t) => `${t.hadith.recueil} ${t.hadith.n
 const traductions = new Map(ancien.traits.map((t) => [t.trait.cle ?? t.trait.en, t.trait]));
 const traductionsHadiths = new Map(ancien.traits.map((t) => [`${t.hadith.recueil} ${t.hadith.numero}`, t.hadith.traduction]));
 const fiche = {
-  wikipedia: ancien.wikipedia,
   exclus: exclusFiche,
   resume: ancien.resume,
   // Trait déjà traduit (même trait de synthèse) : on garde la version relue, sinon trait anglais brut avec sa clé.
@@ -128,6 +127,6 @@ const fiche = {
 };
 writeFileSync(
   fichier,
-  `import type { FicheCompagnon } from "@/conf/types";\n\n// Généré par scripts/fiche.mjs puis relu à la main (résumé Wikipédia, traits, traductions).\nexport const fiche: FicheCompagnon = ${JSON.stringify(fiche, null, 2)};\n`
+  `import type { FicheCompagnon } from "@/conf/types";\n\n// Généré par scripts/fiche.mjs puis relu à la main (résumé, traits, traductions).\nexport const fiche: FicheCompagnon = ${JSON.stringify(fiche, null, 2)};\n`
 );
 console.log(`${fichier.replace(RACINE + "/", "")} : ${fiches.length} traits`);
