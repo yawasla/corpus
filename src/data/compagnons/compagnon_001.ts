@@ -36,6 +36,14 @@ export const fiche: FicheCompagnon = {
     {
       "ref": "Sahih al-Bukhari 3834",
       "raison": "proche d’une décision juridique (vœu de silence), remplacé par Riyad as-Salihin pour la répartition des recueils"
+    },
+    {
+      "ref": "Sahih al-Bukhari 3666",
+      "raison": "espoir exprimé par le Prophète ﷺ, pas un geste d’Abu Bakr"
+    },
+    {
+      "ref": "Al-Muwatta 549",
+      "raison": "chaîne coupée (Yahya ibn Sa‘id – Aïcha), comparaison « la meilleure d’entre elles »"
     }
   ],
   "resume": {
@@ -480,6 +488,47 @@ export const fiche: FicheCompagnon = {
       "valide": true
     },
     {
+      "hadith": {
+        "recueil": "Al-Muwatta",
+        "numero": 546,
+        "arabe": "حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، أَنَّهُ بَلَغَهُ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم تُوُفِّيَ يَوْمَ الاِثْنَيْنِ وَدُفِنَ يَوْمَ الثُّلاَثَاءِ وَصَلَّى النَّاسُ عَلَيْهِ أَفْذَاذًا لاَ يَؤُمُّهُمْ أَحَدٌ ‏.‏ فَقَالَ نَاسٌ يُدْفَنُ عِنْدَ الْمِنْبَرِ ‏.‏ وَقَالَ آخَرُونَ يُدْفَنُ بِالْبَقِيعِ ‏.‏ فَجَاءَ أَبُو بَكْرٍ الصِّدِّيقُ فَقَالَ سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏ \"‏ مَا دُفِنَ نَبِيٌّ قَطُّ إِلاَّ فِي مَكَانِهِ الَّذِي تُوُفِّيَ فِيهِ ‏\"‏ ‏.‏ فَحُفِرَ لَهُ فِيهِ فَلَمَّا كَانَ عِنْدَ غُسْلِهِ أَرَادُوا نَزْعَ قَمِيصِهِ فَسَمِعُوا صَوْتًا يَقُولُ لاَ تَنْزِعُوا الْقَمِيصَ فَلَمْ يُنْزَعِ الْقَمِيصُ وَغُسِّلَ وَهُوَ عَلَيْهِ صلى الله عليه وسلم ‏.‏",
+        "degre": "Sahih",
+        "traduction": {
+          "fr": "Il est parvenu à Malik que le Messager d’Allah ﷺ mourut un lundi et fut enterré le mardi, et que les gens prièrent sur lui chacun de son côté, sans que personne ne les dirige. Certains dirent : « Qu’il soit enterré près du minbar. » D’autres dirent : « Qu’il soit enterré au Baqi‘. » Abu Bakr as-Siddiq vint alors et dit : « J’ai entendu le Messager d’Allah ﷺ dire : “Aucun prophète n’a jamais été enterré ailleurs qu’à l’endroit où il est mort.” » On creusa donc pour lui à cet endroit. Au moment de le laver, ils voulurent lui retirer sa chemise, mais ils entendirent une voix dire : « Ne retirez pas la chemise. » On ne retira donc pas la chemise, et il fut lavé alors qu’il la portait ﷺ.",
+          "en": "It reached Malik that the Messenger of Allah ﷺ died on a Monday and was buried on the Tuesday, and that the people prayed over him individually, with no one leading them. Some said: “He should be buried by the minbar.” Others said: “He should be buried in al-Baqi‘.” Then Abu Bakr as-Siddiq came and said: “I heard the Messenger of Allah ﷺ say: ‘No prophet was ever buried anywhere but in the place where he died.’” So a grave was dug for him there. When they came to wash him, they wanted to remove his shirt, but they heard a voice say: “Do not remove the shirt.” So the shirt was not removed, and he was washed with it on ﷺ.",
+          "es": "Le llegó a Malik que el Mensajero de Allah ﷺ murió un lunes y fue enterrado el martes, y que la gente rezó por él cada uno por su cuenta, sin que nadie los dirigiera. Unos dijeron: «Que sea enterrado junto al minbar». Otros dijeron: «Que sea enterrado en al-Baqi‘». Entonces llegó Abu Bakr as-Siddiq y dijo: «Oí al Mensajero de Allah ﷺ decir: “Ningún profeta ha sido enterrado jamás sino en el lugar donde murió”». Así que se cavó su tumba allí. Cuando fueron a lavarlo, quisieron quitarle la camisa, pero oyeron una voz que decía: «No le quitéis la camisa». No se le quitó la camisa, y fue lavado con ella puesta ﷺ."
+        }
+      },
+      "trait": {
+        "cle": "remembered the Prophet ﷺ's words on burial",
+        "en": "Settled the disagreement over where to bury the Prophet ﷺ",
+        "fr": "A tranché le désaccord sur le lieu d’enterrement du Prophète ﷺ",
+        "es": "Zanjó el desacuerdo sobre el lugar de entierro del Profeta ﷺ",
+        "ar": "حسم الخلاف في موضع دفن النبي ﷺ",
+        "qualites": [
+          {
+            "fr": "Connaissance de la Sunna",
+            "en": "Knowledge of the Sunnah",
+            "es": "Conocimiento de la Sunna",
+            "ar": "العلم بالسنة"
+          },
+          {
+            "fr": "Fidélité au Prophète ﷺ",
+            "en": "Faithfulness to the Prophet ﷺ",
+            "es": "Fidelidad al Profeta ﷺ",
+            "ar": "الوفاء للنبي ﷺ"
+          },
+          {
+            "fr": "Sagesse",
+            "en": "Wisdom",
+            "es": "Sabiduría",
+            "ar": "الحكمة"
+          }
+        ]
+      },
+      "valide": true
+    },
+    {
       "trait": {
         "cle": "preferred simplicity in burial",
         "en": "Asked to be shrouded in his worn garment, like the Prophet ﷺ",
@@ -522,87 +571,46 @@ export const fiche: FicheCompagnon = {
     },
     {
       "hadith": {
-        "recueil": "Al-Muwatta",
-        "numero": 546,
-        "arabe": "حَدَّثَنِي يَحْيَى، عَنْ مَالِكٍ، أَنَّهُ بَلَغَهُ أَنَّ رَسُولَ اللَّهِ صلى الله عليه وسلم تُوُفِّيَ يَوْمَ الاِثْنَيْنِ وَدُفِنَ يَوْمَ الثُّلاَثَاءِ وَصَلَّى النَّاسُ عَلَيْهِ أَفْذَاذًا لاَ يَؤُمُّهُمْ أَحَدٌ ‏.‏ فَقَالَ نَاسٌ يُدْفَنُ عِنْدَ الْمِنْبَرِ ‏.‏ وَقَالَ آخَرُونَ يُدْفَنُ بِالْبَقِيعِ ‏.‏ فَجَاءَ أَبُو بَكْرٍ الصِّدِّيقُ فَقَالَ سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏ \"‏ مَا دُفِنَ نَبِيٌّ قَطُّ إِلاَّ فِي مَكَانِهِ الَّذِي تُوُفِّيَ فِيهِ ‏\"‏ ‏.‏ فَحُفِرَ لَهُ فِيهِ فَلَمَّا كَانَ عِنْدَ غُسْلِهِ أَرَادُوا نَزْعَ قَمِيصِهِ فَسَمِعُوا صَوْتًا يَقُولُ لاَ تَنْزِعُوا الْقَمِيصَ فَلَمْ يُنْزَعِ الْقَمِيصُ وَغُسِّلَ وَهُوَ عَلَيْهِ صلى الله عليه وسلم ‏.‏",
+        "recueil": "Riyad as-Salihin",
+        "numero": 791,
+        "arabe": "وعن ابن عمر رضي الله عنهما أن النبي صلى الله عليه وسلم قال: \"من جر ثوبه خيلاء لم ينظر الله إليه يوم القيامة\"فقال أبو بكر: يارسول الله إن إزارى يسترخى إلا أن أتعاهده، فقال له رسول الله صلى الله عليه وسلم: \"إنك لست ممن يفعله خيلاء\". رواه البخاري، وروى مسلم بعضه.",
         "degre": "Sahih",
         "traduction": {
-          "fr": "Il est parvenu à Malik que le Messager d’Allah ﷺ mourut un lundi et fut enterré le mardi, et que les gens prièrent sur lui chacun de son côté, sans que personne ne les dirige. Certains dirent : « Qu’il soit enterré près du minbar. » D’autres dirent : « Qu’il soit enterré au Baqi‘. » Abu Bakr as-Siddiq vint alors et dit : « J’ai entendu le Messager d’Allah ﷺ dire : “Aucun prophète n’a jamais été enterré ailleurs qu’à l’endroit où il est mort.” » On creusa donc pour lui à cet endroit. Au moment de le laver, ils voulurent lui retirer sa chemise, mais ils entendirent une voix dire : « Ne retirez pas la chemise. » On ne retira donc pas la chemise, et il fut lavé alors qu’il la portait ﷺ.",
-          "en": "It reached Malik that the Messenger of Allah ﷺ died on a Monday and was buried on the Tuesday, and that the people prayed over him individually, with no one leading them. Some said: “He should be buried by the minbar.” Others said: “He should be buried in al-Baqi‘.” Then Abu Bakr as-Siddiq came and said: “I heard the Messenger of Allah ﷺ say: ‘No prophet was ever buried anywhere but in the place where he died.’” So a grave was dug for him there. When they came to wash him, they wanted to remove his shirt, but they heard a voice say: “Do not remove the shirt.” So the shirt was not removed, and he was washed with it on ﷺ.",
-          "es": "Le llegó a Malik que el Mensajero de Allah ﷺ murió un lunes y fue enterrado el martes, y que la gente rezó por él cada uno por su cuenta, sin que nadie los dirigiera. Unos dijeron: «Que sea enterrado junto al minbar». Otros dijeron: «Que sea enterrado en al-Baqi‘». Entonces llegó Abu Bakr as-Siddiq y dijo: «Oí al Mensajero de Allah ﷺ decir: “Ningún profeta ha sido enterrado jamás sino en el lugar donde murió”». Así que se cavó su tumba allí. Cuando fueron a lavarlo, quisieron quitarle la camisa, pero oyeron una voz que decía: «No le quitéis la camisa». No se le quitó la camisa, y fue lavado con ella puesta ﷺ."
+          "fr": "D’après Ibn Umar (qu’Allah les agrée) : le Prophète ﷺ dit : « Celui qui traîne son vêtement par orgueil, Allah ne le regardera pas le Jour de la Résurrection. » Abu Bakr dit : « Ô Messager d’Allah ﷺ, mon izar glisse, à moins que je n’y veille. » Le Messager d’Allah ﷺ lui répondit : « Tu n’es pas de ceux qui le font par orgueil. » Rapporté par al-Bukhari, et Muslim en a rapporté une partie.",
+          "en": "Ibn Umar (may Allah be pleased with them) reported that the Prophet ﷺ said: “Whoever drags his garment out of pride, Allah will not look at him on the Day of Resurrection.” Abu Bakr said: “O Messenger of Allah ﷺ, my izar slips down unless I keep watch over it.” The Messenger of Allah ﷺ said to him: “You are not one of those who do it out of pride.” Reported by al-Bukhari, and Muslim reported part of it.",
+          "es": "Según Ibn Umar (que Allah esté complacido con ambos): el Profeta ﷺ dijo: «Quien arrastre su vestido por orgullo, Allah no lo mirará el Día de la Resurrección». Abu Bakr dijo: «¡Oh Mensajero de Allah ﷺ! Mi izar se me cae, a menos que esté atento a él». El Mensajero de Allah ﷺ le respondió: «Tú no eres de los que lo hacen por orgullo». Reportado por al-Bujari, y Muslim reportó una parte."
         }
       },
       "trait": {
-        "cle": "remembered the Prophet ﷺ's words on burial",
-        "en": "Settled the disagreement over where to bury the Prophet ﷺ",
-        "fr": "A tranché le désaccord sur le lieu d’enterrement du Prophète ﷺ",
-        "es": "Zanjó el desacuerdo sobre el lugar de entierro del Profeta ﷺ",
-        "ar": "حسم الخلاف في موضع دفن النبي ﷺ",
+        "cle": "not vain in dress",
+        "en": "Worried that his garment trailed, for fear of pride",
+        "fr": "S’inquiéta que son izar traîne, par crainte de l’orgueil",
+        "es": "Se inquietó de que su izar arrastrara, por temor al orgullo",
+        "ar": "خشي أن يُعدّ جرُّ إزاره خيلاء",
         "qualites": [
           {
-            "fr": "Connaissance de la Sunna",
-            "en": "Knowledge of the Sunnah",
-            "es": "Conocimiento de la Sunna",
-            "ar": "العلم بالسنة"
+            "fr": "Humilité",
+            "en": "Humility",
+            "es": "Humildad",
+            "ar": "التواضع"
           },
           {
-            "fr": "Fidélité au Prophète ﷺ",
-            "en": "Faithfulness to the Prophet ﷺ",
-            "es": "Fidelidad al Profeta ﷺ",
-            "ar": "الوفاء للنبي ﷺ"
+            "fr": "Crainte d’Allah",
+            "en": "Fear of Allah",
+            "es": "Temor de Allah",
+            "ar": "خشية الله"
           },
           {
-            "fr": "Sagesse",
-            "en": "Wisdom",
-            "es": "Sabiduría",
-            "ar": "الحكمة"
-          }
-        ]
-      },
-      "valide": true
-    },
-    {
-      "hadith": {
-        "recueil": "Al-Muwatta",
-        "numero": 549,
-        "arabe": "وَحَدَّثَنِي عَنْ مَالِكٍ، عَنْ يَحْيَى بْنِ سَعِيدٍ، أَنَّ عَائِشَةَ، زَوْجَ النَّبِيِّ صلى الله عليه وسلم قَالَتْ رَأَيْتُ ثَلاَثَةَ أَقْمَارٍ سَقَطْنَ فِي حُجْرَتِي فَقَصَصْتُ رُؤْيَاىَ عَلَى أَبِي بَكْرٍ الصِّدِّيقِ قَالَتْ فَلَمَّا تُوُفِّيَ رَسُولُ اللَّهِ صلى الله عليه وسلم وَدُفِنَ فِي بَيْتِهَا قَالَ لَهَا أَبُو بَكْرٍ هَذَا أَحَدُ أَقْمَارِكِ وَهُوَ خَيْرُهَا ‏.‏",
-        "degre": "Mauquf Sahih",
-        "traduction": {
-          "fr": "D’après Yahya ibn Sa‘id, Aïcha, épouse du Prophète ﷺ, dit : « J’ai vu trois lunes tomber dans ma chambre, et j’ai raconté mon rêve à Abu Bakr as-Siddiq. » Lorsque le Messager d’Allah ﷺ mourut et fut enterré dans sa maison, Abu Bakr lui dit : « Voici l’une de tes lunes, et c’est la meilleure d’entre elles. »",
-          "en": "Yahya ibn Sa‘id reported that Aisha, wife of the Prophet ﷺ, said: “I saw three moons fall into my room, and I told my dream to Abu Bakr as-Siddiq.” When the Messenger of Allah ﷺ died and was buried in her house, Abu Bakr said to her: “This is one of your moons, and it is the best of them.”",
-          "es": "Según Yahya ibn Sa‘id, Aisha, esposa del Profeta ﷺ, dijo: «Vi tres lunas caer en mi habitación, y conté mi sueño a Abu Bakr as-Siddiq». Cuando el Mensajero de Allah ﷺ murió y fue enterrado en su casa, Abu Bakr le dijo: «Esta es una de tus lunas, y es la mejor de ellas»."
-        }
-      },
-      "trait": {
-        "cle": "interpreted Aisha's dream about the Prophet ﷺ",
-        "en": "Interpreted Aisha’s dream about the Prophet ﷺ",
-        "fr": "A interprété le rêve d’Aïcha sur le Prophète ﷺ",
-        "es": "Interpretó el sueño de Aisha sobre el Profeta ﷺ",
-        "ar": "عبّر رؤيا عائشة في النبي ﷺ",
-        "qualites": [
-          {
-            "fr": "Amour du Prophète ﷺ",
-            "en": "Love for the Prophet ﷺ",
-            "es": "Amor al Profeta ﷺ",
-            "ar": "محبة النبي ﷺ"
+            "fr": "Examen de conscience",
+            "en": "Self-examination",
+            "es": "Examen de conciencia",
+            "ar": "محاسبة النفس"
           },
           {
-            "fr": "Interprétation des rêves",
-            "en": "Interpreting dreams",
-            "es": "Interpretación de los sueños",
-            "ar": "تعبير الرؤى"
-          },
-          {
-            "fr": "Maintien des liens de parenté",
-            "en": "Upholding family ties",
-            "es": "Mantener los lazos familiares",
-            "ar": "صلة الرحم"
-          },
-          {
-            "fr": "Tendresse",
-            "en": "Tenderness",
-            "es": "Ternura",
-            "ar": "الحنان"
+            "fr": "Écoute du conseil",
+            "en": "Openness to counsel",
+            "es": "Escucha del consejo",
+            "ar": "قبول المشورة"
           }
         ]
       },
@@ -1398,46 +1406,46 @@ export const fiche: FicheCompagnon = {
     },
     {
       "hadith": {
-        "recueil": "Sahih al-Bukhari",
-        "numero": 3666,
-        "arabe": "حَدَّثَنَا أَبُو الْيَمَانِ، حَدَّثَنَا شُعَيْبٌ، عَنِ الزُّهْرِيِّ، قَالَ أَخْبَرَنِي حُمَيْدُ بْنُ عَبْدِ الرَّحْمَنِ بْنِ عَوْفٍ، أَنَّ أَبَا هُرَيْرَةَ، قَالَ سَمِعْتُ رَسُولَ اللَّهِ صلى الله عليه وسلم يَقُولُ ‏\"‏ مَنْ أَنْفَقَ زَوْجَيْنِ مِنْ شَىْءٍ مِنَ الأَشْيَاءِ فِي سَبِيلِ اللَّهِ دُعِيَ مِنْ أَبْوَابِ ـ يَعْنِي الْجَنَّةَ ـ يَا عَبْدَ اللَّهِ هَذَا خَيْرٌ، فَمَنْ كَانَ مِنْ أَهْلِ الصَّلاَةِ دُعِيَ مِنْ باب الصَّلاَةِ، وَمَنْ كَانَ مِنْ أَهْلِ الْجِهَادِ دُعِيَ مِنْ باب الْجِهَادِ، وَمَنْ كَانَ مِنْ أَهْلِ الصَّدَقَةِ دُعِيَ مِنْ باب الصَّدَقَةِ، وَمَنْ كَانَ مِنْ أَهْلِ الصِّيَامِ دُعِيَ مِنْ باب الصِّيَامِ، وَبَابِ الرَّيَّانِ ‏\"‏‏.‏ فَقَالَ أَبُو بَكْرٍ مَا عَلَى هَذَا الَّذِي يُدْعَى مِنْ تِلْكَ الأَبْوَابِ مِنْ ضَرُورَةٍ، وَقَالَ هَلْ يُدْعَى مِنْهَا كُلِّهَا أَحَدٌ يَا رَسُولَ اللَّهِ قَالَ ‏\"‏ نَعَمْ، وَأَرْجُو أَنْ تَكُونَ مِنْهُمْ يَا أَبَا بَكْرٍ ‏\"‏‏.‏",
+        "recueil": "Riyad as-Salihin",
+        "numero": 360,
+        "arabe": "وعن أنس رضي الله عنه قال: قال أبو بكر لعمر رضي الله عنهما بعد وفاة رسول الله صلى الله عليه وسلم: انطلق بنا إلى أم أيمن رضي الله عنها نزورها كما كان رسول الله صلى الله عليه وسلم يزورها، فلما انتهيا إليها، بكت، فقالا لها: ما يبكيك أما تعلمين أن ما عند الله خير لرسول الله صلى الله عليه وسلم؟ فقالت: إني لا أبكي أني لأعلم أن ما عند الله تعالى خير لرسول الله صلى الله عليه وسلم، ولكن أبكي أن الوحي قد انقطع من السماء. فهيجتهما على البكاء، فجعلا يبكيان معها. رواه مسلم.",
         "degre": "Sahih",
         "traduction": {
-          "fr": "D’après Abu Hurayra (qu’Allah l’agrée) : J’ai entendu le Messager d’Allah ﷺ dire : « Celui qui dépense une paire de quoi que ce soit dans le sentier d’Allah sera appelé des portes du Paradis : “Ô serviteur d’Allah, voici un bien !” Celui qui était des gens de la prière sera appelé de la porte de la prière, celui qui était des gens du jihad, de la porte du jihad, celui qui était des gens de l’aumône, de la porte de l’aumône, et celui qui était des gens du jeûne, de la porte du jeûne, la porte d’ar-Rayyan. » Abu Bakr dit : « Celui qui est appelé de l’une de ces portes n’a besoin de rien de plus. Mais quelqu’un sera-t-il appelé de toutes, ô Messager d’Allah ? » Il répondit : « Oui, et j’espère que tu seras de ceux-là, ô Abu Bakr. »",
-          "en": "Abu Hurayra (may Allah be pleased with him) reported: I heard the Messenger of Allah ﷺ say: “Whoever spends a pair of anything in the way of Allah will be called from the gates of Paradise: ‘O servant of Allah, this is good!’ Whoever was among the people of prayer will be called from the gate of prayer, whoever was among the people of jihad from the gate of jihad, whoever was among the people of charity from the gate of charity, and whoever was among the people of fasting from the gate of fasting, the gate of ar-Rayyan.” Abu Bakr said: “Whoever is called from one of these gates needs nothing more. But will anyone be called from all of them, O Messenger of Allah?” He said: “Yes, and I hope you will be one of them, O Abu Bakr.”",
-          "es": "Según Abu Hurayra (que Allah esté complacido con él): Oí al Mensajero de Allah ﷺ decir: «Quien gaste un par de cualquier cosa en la causa de Allah será llamado desde las puertas del Paraíso: “¡Oh siervo de Allah, esto es un bien!”. Quien fuera de la gente de la oración será llamado desde la puerta de la oración; quien fuera de la gente del yihad, desde la puerta del yihad; quien fuera de la gente de la limosna, desde la puerta de la limosna; y quien fuera de la gente del ayuno, desde la puerta del ayuno, la puerta de ar-Rayyan». Abu Bakr dijo: «Quien sea llamado desde una de esas puertas no necesita nada más. Pero ¿será alguien llamado desde todas ellas, oh Mensajero de Allah?». Respondió: «Sí, y espero que tú seas uno de ellos, oh Abu Bakr»."
+          "fr": "D’après Anas (qu’Allah l’agrée) : Abu Bakr dit à Umar (qu’Allah les agrée), après la mort du Messager d’Allah ﷺ : « Allons rendre visite à Umm Ayman (qu’Allah l’agrée), comme le Messager d’Allah ﷺ avait l’habitude de le faire. » Quand ils arrivèrent auprès d’elle, elle pleura. Ils lui dirent : « Pourquoi pleures-tu ? Ne sais-tu pas que ce qui est auprès d’Allah est meilleur pour le Messager d’Allah ﷺ ? » Elle répondit : « Je ne pleure pas parce que j’ignorerais que ce qui est auprès d’Allah est meilleur pour le Messager d’Allah ﷺ, mais je pleure parce que la Révélation a cessé de descendre du ciel. » Elle les émut aux larmes, et ils se mirent à pleurer avec elle. Rapporté par Muslim.",
+          "en": "Anas (may Allah be pleased with him) reported: After the death of the Messenger of Allah ﷺ, Abu Bakr said to Umar (may Allah be pleased with them): “Let us go and visit Umm Ayman (may Allah be pleased with her), as the Messenger of Allah ﷺ used to visit her.” When they reached her, she wept. They said to her: “Why are you weeping? Do you not know that what is with Allah is better for the Messenger of Allah ﷺ?” She said: “I do not weep because I do not know that what is with Allah is better for the Messenger of Allah ﷺ, but I weep because the Revelation has ceased to come down from the heavens.” She moved them to tears, and they began to weep with her. Reported by Muslim.",
+          "es": "Según Anas (que Allah esté complacido con él): Tras la muerte del Mensajero de Allah ﷺ, Abu Bakr le dijo a Umar (que Allah esté complacido con ambos): «Vayamos a visitar a Umm Ayman (que Allah esté complacido con ella), como solía visitarla el Mensajero de Allah ﷺ». Cuando llegaron a ella, lloró. Le dijeron: «¿Por qué lloras? ¿Acaso no sabes que lo que está junto a Allah es mejor para el Mensajero de Allah ﷺ?». Ella respondió: «No lloro porque no sepa que lo que está junto a Allah es mejor para el Mensajero de Allah ﷺ, sino que lloro porque la Revelación ha dejado de descender del cielo». Los conmovió hasta las lágrimas, y se pusieron a llorar con ella. Reportado por Muslim."
         }
       },
       "trait": {
-        "cle": "humble about his clothing",
-        "en": "Aspired to all the gates of good",
-        "fr": "Aspirait à toutes les portes du bien",
-        "es": "Aspiraba a todas las puertas del bien",
-        "ar": "كان يطمح إلى أبواب الخير كلها",
+        "cle": "wept at the cessation of Revelation",
+        "en": "Wept over the end of the Revelation",
+        "fr": "Pleura la fin de la Révélation",
+        "es": "Lloró el fin de la Revelación",
+        "ar": "بكى انقطاع الوحي",
         "qualites": [
           {
-            "fr": "Proximité avec le Prophète ﷺ",
-            "en": "Closeness to the Prophet ﷺ",
-            "es": "Cercanía al Profeta ﷺ",
-            "ar": "قربه من النبي ﷺ"
+            "fr": "Fidélité au Prophète ﷺ",
+            "en": "Faithfulness to the Prophet ﷺ",
+            "es": "Fidelidad al Profeta ﷺ",
+            "ar": "الوفاء للنبي ﷺ"
           },
           {
-            "fr": "Foi sincère",
-            "en": "Sincere faith",
-            "es": "Fe sincera",
-            "ar": "صدق الإيمان"
+            "fr": "Attachement au Coran",
+            "en": "Attachment to the Quran",
+            "es": "Apego al Corán",
+            "ar": "التعلق بالقرآن"
           },
           {
-            "fr": "Assiduité dans l’adoration",
-            "en": "Steadfastness in worship",
-            "es": "Constancia en la adoración",
-            "ar": "المواظبة على العبادة"
+            "fr": "Fraternité",
+            "en": "Brotherhood",
+            "es": "Fraternidad",
+            "ar": "الأخوة"
           },
           {
-            "fr": "Générosité",
-            "en": "Generosity",
-            "es": "Generosidad",
-            "ar": "الكرم"
+            "fr": "Sensibilité",
+            "en": "Sensitivity",
+            "es": "Sensibilidad",
+            "ar": "رقة القلب"
           }
         ]
       },
